@@ -1121,12 +1121,12 @@ footer .copyright {
   text-transform: capitalize;
 }
 
-footer .sub-footer {
+/*footer .sub-footer {
   padding: 60px 0px;
-  /*border-top: 1px sfolid rgba(250,250,250,0.3);*/
+  border-top: 1px sfolid rgba(250,250,250,0.3);
   text-align: center;
 }
-
+*/
 footer .sub-footer a {
 	color: #FFF;
 }
