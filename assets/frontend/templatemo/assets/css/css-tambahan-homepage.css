@@ -8,8 +8,8 @@
     color: #fff !important;
     width: 100%;
     height: 45px;
-    background: rgb(248, 218, 109);
-    background: linear-gradient(90deg, rgba(248, 218, 109, 1) 0%, rgba(56, 105, 164, 1) 100%);
+    /* background: rgb(248, 218, 109);
+    background: linear-gradient(90deg, rgba(248, 218, 109, 1) 0%, rgba(56, 105, 164, 1) 100%); */
     border: 0;
 }
 
@@ -26,8 +26,10 @@ a.main-button {
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    background: rgb(248, 218, 109);
-    background: linear-gradient(90deg, rgba(248, 218, 109, 1) 0%, rgba(56, 105, 164, 1) 100%);
+    /* background: rgb(248, 218, 109);
+    background: linear-gradient(90deg, rgba(248, 218, 109, 1) 0%, rgba(56, 105, 164, 1) 100%); */
+    background: rgb(244, 129, 63);
+    background: linear-gradient(90deg, rgba(244, 129, 63, 1) 0%, rgba(243, 119, 73, 1) 51%, rgba(241, 86, 105, 1) 100%);
 }
 
 .features-item h2 {
@@ -82,16 +84,24 @@ a.main-button-slider:hover {
 }
 
 .formLapor {
-    background: rgb(248, 218, 109);
-    background: linear-gradient(90deg, rgba(248, 218, 109, 1) 0%, rgba(56, 105, 164, 1) 100%);
-    padding: 10px;
+    background-color: #f4813f;
+    /* background: rgb(248, 218, 109);
+    background: linear-gradient(90deg, rgba(248, 218, 109, 1) 0%, rgba(56, 105, 164, 1) 100%); */
+    padding: 15px 0;
     color: #fff;
+    background: rgb(244, 129, 63);
+    background: linear-gradient(90deg, rgba(244, 129, 63, 1) 0%, rgba(243, 119, 73, 1) 51%, rgba(241, 86, 105, 1) 100%);
 }
 
 .container-formLapor {
     /*box-shadow: 2px 2px 5px #dfdfdf;*/
     /*width: 60%;*/
     box-shadow: 0 10px 30px 0 rgb(0 0 0 / 20%);
+}
+
+.formlap,
+.header-formlap {
+    padding: 10px 30px;
 }
 
 .jenisinfra .col-md-4 {
@@ -128,4 +138,73 @@ header.header-area.header-sticky .col-12 {
     min-height: 80px;
     position: fixed;
     top: 0;
+}
+
+.features-item h4 {
+    margin-top: 0px;
+    font-size: 22px;
+    color: #1e1e1e;
+    margin: 25px 0;
+}
+
+footer {
+    margin-top: 150px;
+    padding-top: 120px;
+    background-image: url(../images/footer-bg.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+footer .sub-footer {
+    padding: 150px 0 0 0;
+    /*border-top: 1px sfolid rgba(250,250,250,0.3);*/
+    text-align: center;
+}
+
+
+/* Jika icon pakai fontawesome */
+
+i.iconjalan,
+i.iconjembatan,
+i.icondrainase {
+    background-color: #f4813f;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: #396aa3;
+    font-size: 50px;
+    border-radius: 10px;
+    background: rgb(244, 129, 63);
+    background: linear-gradient(90deg, rgba(244, 129, 63, 1) 0%, rgba(243, 119, 73, 1) 51%, rgba(241, 86, 105, 1) 100%);
+}
+
+.features-icon img {
+    background-color: #3068a6;
+    width: 70px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+footer .social li a {
+    color: #fff;
+    text-align: center;
+    background-color: transparent;
+    /* border: 1px solid #fff; */
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    font-size: 35px;
 }
