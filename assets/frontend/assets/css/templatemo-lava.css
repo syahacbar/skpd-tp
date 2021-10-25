@@ -256,9 +256,10 @@ a.main-button {
     transition: all 0.3s ease 0s;
 }
 
-a.main-button:hover {
+
+/* a.main-button:hover {
     background-color: #f1556a;
-}
+} */
 
 button.main-button {
     outline: none;
@@ -278,9 +279,10 @@ button.main-button {
     transition: all 0.3s ease 0s;
 }
 
-button.main-button:hover {
+
+/* button.main-button:hover {
     background-color: #f1556a;
-}
+} */
 
 .center-heading {
     margin-bottom: 70px;
@@ -826,7 +828,7 @@ about
 ---------------------------------------------
 */
 
-#about {
+#jumlahlaporan {
     padding: 100px 0px;
     position: relative;
     z-index: 9;
@@ -895,35 +897,35 @@ promotion
     margin-top: -200px;
 }
 
-#promotion {
+#tentang {
     padding: 100px 0px;
 }
 
-#promotion .left-image {
+#tentang .left-image {
     align-self: center;
 }
 
-#promotion .right-text ul {
+#tentang .right-text ul {
     padding: 0;
     margin: 0;
 }
 
-#promotion .right-text ul li {
+#tentang .right-text ul li {
     display: inline-block;
     margin-bottom: 60px;
 }
 
-#promotion .right-text ul li:last-child {
+#tentang .right-text ul li:last-child {
     margin-bottom: 0px;
 }
 
-#promotion .right-text img {
+#tentang .right-text img {
     display: inline-block;
     float: left;
     margin-right: 30px;
 }
 
-#promotion .right-text h4 {
+#tentang .right-text h4 {
     font-size: 22px;
     color: #1e1e1e;
     margin-bottom: 15px;

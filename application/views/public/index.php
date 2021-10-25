@@ -1,12 +1,12 @@
 <!-- ***** Welcome Area Start ***** -->
-<div class="welcome-area" id="welcome">
+<div class="welcome-area" id="beranda">
 
     <!-- ***** Header Text Start ***** -->
     <div class="header-text">
         <div class="container">
             <div class="row">
                 <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <h1>Bina<em>marga</em></h1>
+                    <h1>SKPD - <em>TP</em></h1>
                     <p>Layanan Pengaduan Ruas Jalan Nasional Kota Sorong - Manokwari. Lorem ipsum, atau ringkasnya lipsum, adalah teks standar yang ditempatkan untuk mendemostrasikan elemen grafis atau presentasi visual seperti font, tipografi, dan tata
                         letak
                     </p>
@@ -20,48 +20,11 @@
 <!-- ***** Welcome Area End ***** -->
 
 <!-- ***** Features Big Item Start ***** -->
-<!-- <section class="section" id="about">
-        <div class="container">
-            <div class="row mb-4">
-                <div class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4">
-                    <h1>Jumlah Laporan</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <div class="features-item">
-                        <div class="features-icon">
-                            <h2>01</h2>
-                            <h4>Jalan</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
-                    <div class="features-item">
-                        <div class="features-icon">
-                            <h2>02</h2>
-                            <h4>Drainase</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                    <div class="features-item">
-                        <div class="features-icon">
-                            <h2>03</h2>
-                            <h4>Jembatan</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-<!-- ***** Features Big Item End ***** -->
-<!-- ***** Features Big Item Start ***** -->
-<section class="section" id="promotion">
+<section class="section" id="tentang">
     <div class="container">
         <div class="row mb-4">
             <div class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4">
-                <h1>Tentang Binamarga</h1>
+                <h1>About Us</h1>
             </div>
         </div>
         <div class="row">
@@ -101,8 +64,13 @@
 <!-- ***** Features Big Item End ***** -->
 
 <!-- ***** Features Big Item Start ***** -->
-<section class="section" id="about">
+<section class="section" id="jumlahlaporan">
     <div class="container">
+        <div class="row mb-4">
+            <div class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4">
+                <h1>Jumlah Laporan</h1>
+            </div>
+        </div>
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                 <div class="features-item">
@@ -152,11 +120,11 @@
 <!-- ***** Features Big Item End ***** -->
 <div class="left-image-decor"></div>
 
-<section>
+<section id="formpengaduan">
     <div class="container container-formLapor ">
         <div class="row">
             <div class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4 formLapor">
-                <h1>Laporan Pengaduan</h1>
+                <h1>Form Pengaduan</h1>
             </div>
         </div>
         <div class="row mb-4 header-formlap">
@@ -341,7 +309,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Kabupaten/Kota</label>
-                                <select class="custom-select" name="lokasi_kabjalan" id="lokasi_kabjalan">
+                                <select class="custom-select" name="lokasi_kabjalan" id="lokasi_kabjalan" required>
                                     <option selected>Pilih</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
@@ -354,7 +322,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Kecamatan/Distrik</label>
-                                <select class="custom-select" name="lokasi_kecjalan" id="lokasi_kecjalan">
+                                <select class="custom-select" name="lokasi_kecjalan" id="lokasi_kecjalan" required>
                                     <option selected>Pilih</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
@@ -366,7 +334,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Kelurahan/Desa</label>
-                                <select class="custom-select" name="lokasi_desajalan" id="lokasi_desajalan">
+                                <select class="custom-select" name="lokasi_desajalan" id="lokasi_desajalan" required>
                                     <option selected>Pilih</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
@@ -379,7 +347,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Isi Laporan</label>
-                                <textarea type="text" class="form-control" name="isi_laporan" id="isi_laporan" aria-describedby="emailHelp"></textarea>
+                                <textarea type="text" class="form-control" name="isi_laporan" id="isi_laporan" required></textarea>
                             </div>
                         </div>
                     </div>
@@ -401,7 +369,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="form-group">
                                 <label>Foto 1</label>
-                                <div id="dokumentasi" name="dokumentasi_1" class="dropzone">
+                                <div id="dokumentasi" name="dokumentasi_1" class="dropzone" required>
                                     <div class="dz-message"></div>
                                 </div>
                             </div>
@@ -410,7 +378,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="form-group">
                                 <label>Foto 2</label>
-                                <div id="dokumentasi" name="dokumentasi_2" class="dropzone">
+                                <div id="dokumentasi" name="dokumentasi_2" class="dropzone" required>
                                     <div class="dz-message"></div>
                                 </div>
                             </div>
@@ -419,7 +387,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="form-group">
                                 <label>Foto 3</label>
-                                <div id="dokumentasi" name="dokumentasi_2" class="dropzone">
+                                <div id="dokumentasi" name="dokumentasi_2" class="dropzone" required>
                                     <div class="dz-message"></div>
                                 </div>
                             </div>
