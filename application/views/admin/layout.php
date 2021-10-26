@@ -277,8 +277,8 @@
             <li class="nav-heading">Laporan Pengaduan</li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="<?php echo site_url('admin/infrastruktur'); ?>">
-                    <i class="bi bi-menu-button-wide"></i><span>By Infrastruktur</span>
+                <a class="nav-link collapsed" href="<?php echo site_url('admin/pengaduan'); ?>">
+                    <i class="bi bi-menu-button-wide"></i><span>Data Pengaduan</span>
                     <!-- <i class="bi bi-chevron-down ms-auto"></i> -->
                 </a>
                 <!-- <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
@@ -305,8 +305,8 @@
             </li><!-- End Components Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="<?php echo site_url('admin/kabkota'); ?>">
-                    <i class="bi bi-journal-text"></i><span>By Kab./Kota</span>
+                <a class="nav-link collapsed" href="<?php echo site_url('admin/download'); ?>">
+                    <i class="bi bi-journal-text"></i><span>Unduh Laporan</span>
                     <!-- <i class="bi bi-chevron-down ms-auto"></i> -->
                 </a>
                 <!-- <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
@@ -324,18 +324,19 @@
                     </li>
                 </ul> -->
             </li><!-- End Forms Nav -->
-
+            <!-- 
             <li class="nav-heading">Pelaporan</li>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="<?php echo site_url('admin/download'); ?>">
                     <i class="bi bi-layout-text-window-reverse"></i><span>Unduh Laporan</span>
                 </a>
-            </li><!-- End Tables Nav -->
+            </li> -->
+            <!-- End Tables Nav -->
 
             <li class="nav-heading">Manajemen Pengguna</li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="<?php echo site_url('admin/akunanggota') ?>">
+                <a class="nav-link collapsed" href="<?php echo site_url('admin/akunpengguna') ?>">
                     <i class="bi bi-person"></i>
                     <span>Akun Pengguna</span>
                 </a>
@@ -358,14 +359,7 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            &copy; Copyright <strong><span>SKPD-TP</span></strong>. All Rights Reserved
         </div>
     </footer><!-- End Footer -->
 
