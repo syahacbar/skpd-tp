@@ -25,6 +25,7 @@
 
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src='https://www.google.com/recaptcha/api.js?hl=id'></script>
 
 
 
@@ -462,6 +463,9 @@
                             </div>
                         </div>
                     </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <center><?php echo $recaptcha; ?></center>
+                        </div>
 
                     <div class="row">
                         <div class="col-md-12">

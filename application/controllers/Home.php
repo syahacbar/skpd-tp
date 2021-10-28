@@ -7,11 +7,12 @@ class Home extends CI_Controller
         parent::__construct();
         $this->load->model('M_lapor');
         $this->load->model('M_setting');
+        $this->load->library('recaptcha'); 
     }
 
     function index()
     {
-
+        $recaptcha = $this->recaptcha->create_box();
         $get_kab = $this->db->query("SELECT * FROM wilayah_2020 WHERE LENGTH(kode) = 5 AND kode LIKE '92%' ORDER BY kode ASC");
         $data['kabupaten'] = $get_kab->result();
 
@@ -27,7 +28,7 @@ class Home extends CI_Controller
         $data['jum_lap_jalan'] = $this->M_lapor->get_infrastruktur('jalan')->num_rows();
         $data['kodelaporan'] = $kodelaporan;
         // $data['_view'] = 'public/home';
-        // $data['recaptcha'] = $recaptcha;
+        $data['recaptcha'] = $recaptcha;
         // $data['recaptcha2'] = $recaptcha;
         $data['_view'] = 'public/index';
         $this->load->view('public/index', $data);
