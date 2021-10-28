@@ -8,4 +8,14 @@ class M_pengaduan extends CI_Model
         $query = $this->db->get('pengaduan');
         return $query->result();
     }
+
+
+    function get_lastrow()
+    {
+        $last_idlap = $this->db->order_by('id', "desc")
+            ->limit(1)
+            ->get('pengaduan');
+        return $last_idlap;
+    }
+
 }

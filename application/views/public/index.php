@@ -27,7 +27,8 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <script src='https://www.google.com/recaptcha/api.js?hl=id'></script>
 
-
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
 </head>
 
@@ -150,7 +151,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                     <div class="features-item">
                         <div class="features-icon">
                             <!-- <h2>01</h2> -->
@@ -164,7 +165,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
                     <div class="features-item">
                         <div class="features-icon">
                             <!-- <h2>02</h2> -->
@@ -178,7 +179,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                     <div class="features-item">
                         <div class="features-icon">
                             <!-- <h2>03</h2> -->
@@ -239,42 +240,47 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Alamat Tinggal</label>
-                                <textarea type="text" class="form-control" name="alamat_pelapor" id="alamat_pelapor" required></textarea>
+                                <textarea type="text" class="form-control" rows="8" name="alamat_pelapor" id="alamat_pelapor" placeholder="Format nama jalan: Nama jalan, No. Rumah, RT/RW, dan nama kompleks." required></textarea>
                             </div>
                         </div>
 
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Kabupaten/Kota</label>
-                                <select class="custom-select" name="kab_pelapor" id="kab_pelapor" required>
-                                    <option value=""><i class="fas fa-chevron-down"></i>- Pilih Kabupaten/Kota -</option>
-                                    <?php
-                                    foreach ($kabupaten as $kab) {
-                                        echo '<option value="' . $kab->kode . '">' . $kab->nama . '</option>';
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Kecamatan/Distrik</label>
-                                <select class="custom-select" name="kec_pelapor" id="kec_pelapor" required>
-                                    <option value="">Pilih</option>
-                                </select>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Kabupaten/Kota</label>
+                                        <select class="custom-select" name="kab_pelapor" id="kab_pelapor" required>
+                                            <option value=""><i class="fas fa-chevron-down"></i>- Pilih Kabupaten/Kota -</option>
+                                            <?php
+                                            foreach ($kabupaten as $kab) {
+                                                echo '<option value="' . $kab->kode . '">' . $kab->nama . '</option>';
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Kecamatan/Distrik</label>
+                                        <select class="custom-select" name="kec_pelapor" id="kec_pelapor" required>
+                                            <option value="">Pilih</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Kelurahan/Desa</label>
+                                        <select class="custom-select" name="des_pelapor" id="des_pelapor" required>
+                                            <option value="">Pilih</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Kelurahan/Desa</label>
-                                <select class="custom-select" name="des_pelapor" id="des_pelapor" required>
-                                    <option value="">Pilih</option>
-                                </select>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="row">
@@ -297,9 +303,14 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Unggah KTP</label>
+                               <div class="alert alert-warning alert-dismissible fade show peringatan" role="alert">
+                                    <strong>Tips!</strong> Silakan unggah foto KTP Anda. Foto harus jelas!
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
                                 <div id="ktp" class="dropzone ktp">
-                                    <div class="dz-message"></div>
-                                    <h5>Klik atau drop foto ke sini</h5>
+                                    <div class="dz-message">Klik atau drop foto ke sini</div>
                                 </div>
                             </div>
                         </div>
@@ -376,59 +387,58 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Nama Ruas Jalan</label>
-                                <textarea type="text" class="form-control" name="nama_ruasjalan" id="nama_ruasjalan" required></textarea>
+                                <textarea type="text" class="form-control" rows="5" name="nama_ruasjalan" id="nama_ruasjalan" required></textarea>
                             </div>
                         </div>
 
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Kabupaten/Kota</label>
-                                <select class="custom-select" name="lokasi_kabkota" id="lokasi_kabkota" required>
-                                    <option value=""><i class="fas fa-chevron-down"></i>- Pilih Kabupaten/Kota -</option>
-                                    <?php
-                                    foreach ($kabupaten as $kab) {
-                                        echo '<option value="' . $kab->kode . '">' . $kab->nama . '</option>';
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Kecamatan/Distrik</label>
-                                <select class="custom-select" name="lokasi_distrik" id="lokasi_distrik" required>
-                                    <option value="">Pilih</option>
-                                </select>
-                            </div>
-                        </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Kabupaten/Kota</label>
+                                        <select class="custom-select" name="lokasi_kabkota" id="lokasi_kabkota" required>
+                                            <option value=""><i class="fas fa-chevron-down"></i>- Pilih Kabupaten/Kota -</option>
+                                            <?php
+                                            foreach ($kabupaten as $kab) {
+                                                echo '<option value="' . $kab->kode . '">' . $kab->nama . '</option>';
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>    
 
-                        <!-- <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Kelurahan/Desa</label>
-                                    <select class="custom-select" name="lokasi_desajalan" id="lokasi_desajalan" required>
-                                        <option value="">Pilih</option>
-                                    </select>
+
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Kecamatan/Distrik</label>
+                                        <select class="custom-select" name="lokasi_distrik" id="lokasi_distrik" required>
+                                            <option value="">- Pilih Kecamatan/Distrik -</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div> -->
+                            </div>
+
+
+
+                        </div>
                     </div>
+
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Isi Laporan</label>
-                                <textarea type="text" class="form-control" name="isi_laporan" id="isi_laporan" required></textarea>
+                                <textarea type="text" class="form-control" rows="6" name="isi_laporan" id="isi_laporan" required></textarea>
                             </div>
                         </div>
                     </div>
 
 
-                    <div class="row">
+                    <div id="buktiLaporan" class="row">
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Bukti Laporan</label>
                                 <div class="alert alert-warning alert-dismissible fade show peringatan" role="alert">
-                                    <strong>Tips!</strong> Silakan unggah bukti laporan Anda.
+                                    <strong>Tips!</strong> Silakan unggah bukti laporan Anda. Klik ikon tanda tanya untuk melihat bantuan.
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -438,34 +448,43 @@
 
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="form-group">
-                                <label>Foto 1</label>
+                                <!-- <label>Foto 1</label> -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBantuan">
+                                <i class="bi bi-info-square-fill"></i>
+                            </button>
                                 <div id="dokumentasi" class="dropzone dokumentasi dokumentasi1" required>
-                                    <div class="dz-message"></div>
+                                    <div class="dz-message">Klik atau drop foto ke sini</div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="form-group">
-                                <label>Foto 2</label>
+                                <!-- <label>Foto 2</label> -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBantuan1">
+                                <i class="bi bi-info-square-fill"></i>
+                            </button>
                                 <div id="dokumentasi" class="dropzone dokumentasi dokumentasi2" required>
-                                    <div class="dz-message"></div>
+                                    <div class="dz-message">Klik atau drop foto ke sini</div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="form-group">
-                                <label>Foto 3</label>
+                                <!-- <label>Foto 3</label> -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBantuan2">
+                                <i class="bi bi-info-square-fill"></i>
+                            </button>
                                 <div id="dokumentasi" class="dropzone dokumentasi dokumentasi3" required>
-                                    <div class="dz-message"></div>
+                                    <div class="dz-message">Klik atau drop foto ke sini</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                            <center><?php echo $recaptcha; ?></center>
-                        </div>
+                        <!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <center><?php// echo $recaptcha; ?></center>
+                        </div> -->
 
                     <div class="row">
                         <div class="col-md-12">
@@ -520,6 +539,115 @@
         </div>
     </footer>
 
+
+<!-- Modal Bantuan 1 -->
+    <div class="modal fade" id="modalBantuan" tabindex="-1" role="dialog" aria-labelledby="modalBantuanLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBantuanLabel">Info!</h5>
+                    <!-- <span aria-hidden="true">&times;</span> -->
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Foto bagian jalan yang rusak secara menyeluruh. Lihat gambar di bawah ini sebagai contoh.
+                        <img class="d-block w-100" src="<?php echo base_url('assets/frontend/assets/images/jalan-rusak.jpg') ?>" alt="First slide">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Akhir Modal Bantuan -->
+
+    <!-- Modal Bantuan 2 -->
+    <div class="modal fade" id="modalBantuan1" tabindex="-1" role="dialog" aria-labelledby="modalBantuan1Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBantuan1Label">Info!</h5>
+                    <!-- <span aria-hidden="true">&times;</span> -->
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Unggah foto drainase yang rusak. Cara mengambilfoto yang benar seperti gambar di bawah ini.
+                    <img class="d-block w-100" src="<?php echo base_url('assets/frontend/assets/images/drainase-rusak.jpg') ?>" alt="tampak samping jalan">
+    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Akhir Modal Bantuan -->
+
+    <!-- Modal Bantuan 3 -->
+    <div class="modal fade" id="modalBantuan2" tabindex="-1" role="dialog" aria-labelledby="modalBantuan2Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBantuan2Label">Info!</h5>
+                    <!-- <span aria-hidden="true">&times;</span> -->
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Silakan unggah foto jembatan yang rusak. Lihat gambar di bawah ini sebagai contoh.
+                    <img src="<?php echo base_url('assets/frontend/assets/images/jembatan-rusak.jpg') ?>" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Akhir Modal Bantuan -->
+
+    <!-- Modal Detail Laporan-->
+    <div class="modal fade" id="report-detail" tabindex="-1" role="dialog" aria-labelledby="report-detailTitle" aria-hidden="true">
+        <div id="newreport" class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="report-detailTitle"><span id="slokasi_namajalant"></span></h5>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img id="sdokumentasi1" src="" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img id="sdokumentasi2" src="" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                    <div class="card-body">
+                        <p class="card-text"><span id="spengaduan"></span></p>
+                        <p class="card-text"><small class="text-muted">Lokasi Ruas Jalan: </small><span id="slokasi_namajalan"></span></p>
+                        <p class="card-text"><small class="text-muted">Kecamatan/Distrik: </small><span id="slokasi_distrik"></span></p>
+                        <p class="card-text"><small class="text-muted">Kabupaten/Kota: </small><span id="slokasi_kabkota"></span></p>
+                        <p class="card-text"><small class="text-muted">Koordinat Lokasi: </small><span id="slokasi_koordinat"></span></p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
@@ -572,7 +700,7 @@
                 acceptedFiles: "image/*",
                 paramName: "filektp",
                 dictInvalidFileType: "Type file ini tidak dizinkan",
-                // addRemoveLinks: false,
+                addRemoveLinks: false,
             });
 
             ktp_upload.on("sending", function(a, b, c) {
@@ -590,7 +718,7 @@
                 acceptedFiles: "image/*",
                 paramName: "filedokumentasi1",
                 dictInvalidFileType: "Type file ini tidak dizinkan",
-                // addRemoveLinks: false,
+                addRemoveLinks: false,
             });
 
             dokumentasi1_upload.on("sending", function(a, b, c) {
@@ -608,7 +736,7 @@
                 acceptedFiles: "image/*",
                 paramName: "filedokumentasi2",
                 dictInvalidFileType: "Type file ini tidak dizinkan",
-                // addRemoveLinks: false,
+                addRemoveLinks: false,
             });
 
             dokumentasi2_upload.on("sending", function(a, b, c) {
@@ -626,7 +754,7 @@
                 acceptedFiles: "image/*",
                 paramName: "filedokumentasi3",
                 dictInvalidFileType: "Type file ini tidak dizinkan",
-                // addRemoveLinks: false,
+                addRemoveLinks: false,
             });
 
             dokumentasi3_upload.on("sending", function(a, b, c) {
@@ -679,7 +807,9 @@
                         lokasi_kabkota: lokasi_kabkota,
                         lokasi_distrik: lokasi_distrik,
                         isi_laporan: isi_laporan,
-                        kodelaporan: kodelaporan
+                        kodelaporan: kodelaporan,
+                        // 'g-recaptcha-response': grecaptcha.getResponse()
+
 
                     },
                     error: function() {
