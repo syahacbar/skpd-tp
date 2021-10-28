@@ -10,25 +10,26 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <title>Beranda - SKPD-TP</title>
-    <!-- Lava Landing Page https://templatemo.com/tm-540-lava-landing-page -->
 
     <!-- Additional CSS Files -->
-
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/frontend/assets/css/bootstrap.min.css') ?>">
-
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/frontend/assets/css/font-awesome.css') ?>">
-
     <link rel="stylesheet" href="<?php echo base_url('assets/frontend/assets/css/templatemo-lava.css') ?>">
-
     <link rel="stylesheet" href="<?php echo base_url('assets/frontend/assets/css/owl-carousel.css') ?>">
 
     <!-- CSS  Tambahan-->
     <link rel="stylesheet" href="<?php echo base_url('assets/frontend/assets/css/css-tambahan-homepage.css') ?>">
 
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.css' type='text/css' rel='stylesheet'>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.js' type='text/javascript'></script>
+    <!-- Dropzone -->
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- jQuery -->
+    <script src="<?php echo base_url('assets/frontend/assets/js/jquery-2.1.0.min.js') ?>"></script>
+
+
 </head>
 
 <body>
@@ -98,9 +99,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- jQuery -->
-    <script src="<?php echo base_url('assets/frontend/assets/js/jquery-2.1.0.min.js') ?>"></script>
 
     <!-- Bootstrap -->
     <script src="<?php echo base_url('assets/frontend/assets/js/popper.js') ?>"></script>
