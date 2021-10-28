@@ -84,9 +84,9 @@ class Home extends CI_Controller
 
             $pengaduan_id = $this->M_lapor->add_pengaduan($params);
 
-            $nama_pelapor = $this->input->post('nama_pelapor');
-            $nowapelapor = $this->input->post('no_hp');
-            $nowakabid = $this->M_setting->get_nowa_kabid($this->input->post('lokasi_kabkota'))->phone;
+            // $nama_pelapor = $this->input->post('nama_pelapor');
+            // $nowapelapor = $this->input->post('no_hp');
+            // $nowakabid = $this->M_setting->get_nowa_kabid($this->input->post('lokasi_kabkota'))->phone;
             // $nowakabid = '085244146207';
             $kodelaporan = $this->input->post('kodelaporan');
             $distrik = $this->M_setting->get_wilayah($this->input->post('lokasi_distrik'));
@@ -95,8 +95,8 @@ class Home extends CI_Controller
             $imageurl = base_url() . 'upload/dokumentasi/' . $image;
             $ruasjalan = $this->input->post('nama_ruasjalan');
 
-            $this->wasendpelapor($nowapelapor, $nama_pelapor, $ruasjalan, $distrik, $kabupaten);
-            $this->wasendkabid($nowakabid, $kodelaporan, $ruasjalan, $kabupaten, $distrik, $imageurl);
+            //$this->wasendpelapor($nowapelapor, $nama_pelapor, $ruasjalan, $distrik, $kabupaten);
+            //$this->wasendkabid($nowakabid, $kodelaporan, $ruasjalan, $kabupaten, $distrik, $imageurl);
         }
     }
 
