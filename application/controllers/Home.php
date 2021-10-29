@@ -37,8 +37,6 @@ class Home extends CI_Controller
             $uploaded_on=date("Y-m-d H:i:s");
             $this->db->insert('upload',array('nama_file'=>$nama,'token'=>$token,'kategori'=>$kategori,'uploaded_on'=>$uploaded_on,'kodelaporan'=>$kodelaporan));
         }
-
-
     }
 
 
