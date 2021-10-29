@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+ 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -30,8 +30,8 @@
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
- <link href='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.css' type='text/css' rel='stylesheet'>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.js' type='text/javascript'></script>
+ <link href='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.css' type='text/css' rel='stylesheet'><!-- 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.js' type='text/javascript'></script> -->
 </head>
 
 <body>
@@ -230,8 +230,7 @@
 
             <div class="row formlap">
                 <div class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4">
-                    <?php echo form_open_multipart('home/add', array('id' => 'formlaporan')); ?>
-                    <!-- <form method="POST" action=""> -->
+                    <form id="formlapor" method="POST" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -265,7 +264,7 @@
                                         <select class="custom-select" name="kab_pelapor" id="kab_pelapor" requireda>
                                             <option value=""><i class="fas fa-chevron-down"></i>- Pilih Kabupaten/Kota -</option>
                                             <?php
-                                            foreach ($kabupaten as $kab) {
+                                            foreach ($wil_kab as $kab) {
                                                 echo '<option value="' . $kab->kode . '">' . $kab->nama . '</option>';
                                             }
                                             ?>
@@ -323,7 +322,7 @@
                                     </button>
                                 </div>
                                 <div id="ktp" class="dropzone ktp">
-                                    <div class="dz-message">Klik atau drop foto ke sini</div>
+                                    <div class="dz-message">Klik atau drop foto KTP ke sini</div>
                                 </div>
                             </div>
                         </div>
@@ -412,7 +411,7 @@
                                         <select class="custom-select" name="lokasi_kabkota" id="lokasi_kabkota" requireda>
                                             <option value=""><i class="fas fa-chevron-down"></i>- Pilih Kabupaten/Kota -</option>
                                             <?php
-                                            foreach ($kabupaten as $kab) {
+                                            foreach ($wil_kab as $kab) {
                                                 echo '<option value="' . $kab->kode . '">' . $kab->nama . '</option>';
                                             }
                                             ?>
@@ -496,13 +495,13 @@
                         </div>
                     </div>
 
-<!--                     <div class="">
+                    <div class="">
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="form-group">
-                                <center><?php //echo $recaptcha; ?></center>
+                                <center><?php echo $recaptcha; ?></center>
                             </div>
                         </div>                        
-                    </div> -->
+                    </div>
 
                     <div class="row">
                         <div class="col-md-12">
@@ -515,8 +514,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <input type="hidden" id="kodelaporan" name="kodelaporan" value="<?php// echo $kodelaporan; ?>">
+                    <input type="hidden" name="kodelaporan" id="kodelaporan" value="<?php echo $kodelaporan; ?>">
 
                     <div class="row">
                         <div class="col-md-12">
@@ -525,7 +523,7 @@
                             </div>
                         </div>
                     </div>
-                    <?php echo form_close(); ?>
+                    </form>
                 </div>
                 <!-- </form> -->
             </div>
@@ -550,7 +548,7 @@
                             <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
                             <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>
                             <!-- <li><a href="#"><i class="fab fa-instagram-square"></i></a></li> -->
-                        </ul>
+                        </ul> 
                     </div>
                 </div>
             </div>
@@ -766,16 +764,33 @@
     <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
 
     <script>
+    Dropzone.autoDiscover = false;
+    $(document).ready(function() {
+        $("#kab_pelapor").change(function() {
+            var url = "<?php echo site_url('lapor/add_ajax_kec'); ?>/" + $(this).val();
+            $('#kec_pelapor').load(url);
+            return false;
+        });
 
-        Dropzone.autoDiscover = false;
+        $("#kec_pelapor").change(function() {
+            var url = "<?php echo site_url('lapor/add_ajax_des'); ?>/" + $(this).val();
+            $('#des_pelapor').load(url);
+            return false;
+        });
+
+        $("#lokasi_kabkota").change(function() {
+            var url = "<?php echo site_url('lapor/add_ajax_kec'); ?>/" + $(this).val();
+            $('#lokasi_distrik').load(url);
+            return false;
+        });
 
         var ktp_upload = new Dropzone(".ktp", {
             autoProcessQueue: true,
-            url: "<?php echo site_url('home/fotoktp') ?>",
+            url: "<?php echo site_url('lapor/uploadktp') ?>",
             maxFilesize: 50,
             maxFiles: 1,
             method: "post",
-            acceptedFiles: ".jpeg,.jpg,.png,.gif",
+            acceptedFiles: "image/*",
             paramName: "filektp",
             dictInvalidFileType: "Type file ini tidak dizinkan",
             addRemoveLinks: true,
@@ -783,130 +798,69 @@
 
         ktp_upload.on("sending", function(a, b, c) {
             a.token = Math.random();
-            c.append("token_foto", a.token);
-            c.append("kodelaporan", $('#ktp').val());
+            c.append("token_foto", a.token); //Menmpersiapkan token untuk masing masing foto
+            c.append("kodelaporan", $('#kodelaporan').val());
         });
 
 
-        var upload_fotodoc1 = new Dropzone(".dokumentasi1", {
-            autoProcessQueue: true,
-            url: "<?php echo site_url('home/fotodoc1') ?>",
-            maxFilesize: 50,
-            maxFiles: 1,
-            method: "post",
-            acceptedFiles: "image/*",
-            paramName: "filedokumentasi1",
-            dictInvalidFileType: "Type file ini tidak dizinkan",
-            addRemoveLinks: true,
-        });
+        $('#formlapor').submit(function(e) {
+            e.preventDefault();
+            var kodelaporan = $("input[name='kodelaporan']").val();
+            var nama_pelapor = $("input[name='nama_pelapor']").val();
+            var nik = $("input[name='nik']").val();
+            var alamat_pelapor = $("textarea[name='alamat_pelapor']").val();
+            var kab_pelapor = $("select[name='kab_pelapor']").val();
+            var kec_pelapor = $("select[name='kec_pelapor']").val();
+            var des_pelapor = $("select[name='des_pelapor']").val();
+            var no_hp = $("input[name='no_hp']").val();
+            var email = $("input[name='email']").val();
+            var isi_laporan = $("textarea[name='isi_laporan']").val();
+            var infrastruktur = $("input[name='infrastruktur']").val();
+            var nama_ruasjalan = $("textarea[name='nama_ruasjalan']").val();
+            var lokasi_kabkota = $("select[name='lokasi_kabkota']").val();
+            var lokasi_distrik = $("select[name='lokasi_distrik']").val();
+            var latitude = $("input[name='latitude']").val();
+            var longitude = $("input[name='longitude']").val();
 
-        upload_fotodoc1.on("sending", function(a, b, c) {
-            a.token = Math.random();
-            c.append("token_dokumentasi", a.token); //Menmpersiapkan token untuk masing masing foto
-            c.append("kodelaporan", $('#dokumentasi').val());
-            c.append("kategori", "dokumentasi1");
-        });
+            $.ajax({
+                url: "<?php echo site_url('lapor/savelaporan') ?>",
+                type: "POST",
+                data: {
+                    kodelaporan: kodelaporan,
+                    nama_pelapor: nama_pelapor,
+                    nik: nik,
+                    alamat_pelapor: alamat_pelapor,
+                    kab_pelapor: kab_pelapor,
+                    kec_pelapor: kec_pelapor,
+                    des_pelapor: des_pelapor,
+                    no_hp: no_hp,
+                    email: email,
+                    isi_laporan: isi_laporan,
+                    infrastruktur: infrastruktur,
+                    nama_ruasjalan: nama_ruasjalan,
+                    lokasi_kabkota: lokasi_kabkota,
+                    lokasi_distrik: lokasi_distrik,
+                    latitude: latitude,
+                    longitude: longitude,
+                    'g-recaptcha-response': grecaptcha.getResponse()
+                },
+                error: function() {
+                    console.log('Tidak berhasil simpan data');
+                },
+                success: function(data) {
+                    var objData = jQuery.parseJSON(data);
 
-        // Unggah bukti laporan kedua
-        var upload_fotodoc2 = new Dropzone(".dokumentasi2", {
-            autoProcessQueue: true,
-            url: "<?php echo site_url('home/fotodoc2') ?>",
-            maxFilesize: 50,
-            maxFiles: 1,
-            method: "post",
-            acceptedFiles: "image/*",
-            paramName: "filedokumentasi2",
-            dictInvalidFileType: "Type file ini tidak dizinkan",
-            addRemoveLinks: true,
-        });
-
-        upload_fotodoc2.on("sending", function(a, b, c) {
-            a.token = Math.random();
-            c.append("token_dokumentasi", a.token); //Menmpersiapkan token untuk masing masing foto
-            c.append("kodelaporan", $('#dokumentasi').val());
-            c.append("kategori", "dokumentasi2");
-        });
-
-
-        // Unggah bukti laporan kedua
-        var upload_fotodoc2 = new Dropzone(".dokumentasi3", {
-            autoProcessQueue: true,
-            url: "<?php echo site_url('home/fotodoc3') ?>",
-            maxFilesize: 50,
-            maxFiles: 1,
-            method: "post",
-            acceptedFiles: "image/*",
-            paramName: "filedokumentasi3",
-            dictInvalidFileType: "Type file ini tidak dizinkan",
-            addRemoveLinks: true,
-        });
-
-        upload_fotodoc2.on("sending", function(a, b, c) {
-            a.token = Math.random();
-            c.append("token_dokumentasi", a.token); //Menmpersiapkan token untuk masing masing foto
-            c.append("kodelaporan", $('#dokumentasi').val());
-            c.append("kategori", "dokumentasi3");
-        });
-
-
-
-        $('#formlaporan').submit(function(e) {
-
-                document.getElementById("btnSubmit").classList.add('disabled');
-
-                var nik = $("input[name='nik']").val();
-                var nama_pelapor = $("input[name='nama_pelapor']").val();
-                var alamat_pelapor = $("textarea[name='alamat_pelapor']").val();
-                var kab_pelapor = $("select[name='kab_pelapor']").val();
-                var kec_pelapor = $("select[name='kec_pelapor']").val();
-                var des_pelapor = $("select[name='des_pelapor']").val();
-                var email = $("input[name='email']").val();
-                var no_hp = $("input[name='no_hp']").val();
-                var infrastruktur = $("input[name='infrastruktur']").val();
-                var latitude = $("input[name='latitude']").val();
-                var longitude = $("input[name='longitude']").val();
-                var nama_ruasjalan = $("textarea[name='nama_ruasjalan']").val();
-                var lokasi_kabkota = $("select[name='lokasi_kabkota']").val();
-                var lokasi_distrik = $("select[name='lokasi_distrik']").val();
-                var isi_laporan = $("textarea[name='isi_laporan']").val();
-                var kodelaporan = $("input[name='kodelaporan']").val();
-
-
-                $.ajax({
-                    url: "<?php echo site_url('home/add') ?>",
-                    type: "POST",
-                    data: {
-                        nik: nik,
-                        nama_pelapor: nama_pelapor,
-                        alamat_pelapor: alamat_pelapor,
-                        kab_pelapor: kab_pelapor,
-                        kec_pelapor: kec_pelapor,
-                        des_pelapor: des_pelapor,
-                        email: email,
-                        no_hp: no_hp,
-                        infrastruktur: infrastruktur,
-                        latitude: latitude,
-                        longitude: longitude,
-                        nama_ruasjalan: nama_ruasjalan,
-                        lokasi_kabkota: lokasi_kabkota,
-                        lokasi_distrik: lokasi_distrik,
-                        isi_laporan: isi_laporan,
-                        kodelaporan: kodelaporan,
-                        // 'g-recaptcha-response': grecaptcha.getResponse()
-
-
-                    },
-                    error: function() {
-                        alert('Something is wrong');
-                    },
-                    success: function(data) {
-                        alert("Laporan Berhasil Terkirim");
-                        spinner.hide();
+                    if(objData.status) {
+                        console.log('Simpan berhasil');
                         location.reload();
+                    } else {
+                        console.log('Gagal simpan');
                     }
-                });
-
+                }
             });
+
+        });
+    });
     </script>
 
 </body>

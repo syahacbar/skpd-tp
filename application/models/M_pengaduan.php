@@ -3,18 +3,27 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class M_pengaduan extends CI_Model
 {
-    public function get_all()
-    {
-        $query = $this->db->get('pengaduan', 'upload');
-        return $query->result_array();
 
+    function get_all()
+    {
+        $query = $this->db->get('pengaduan');
+        return $query->result();
     }
 
-    // function add_biodata($params)
-    // {
-    //     $this->db->insert('upload', $params);
-    //     return $this->db->insert_id();
-    // }
+    function add($params)
+    {
+        $this->db->insert('pengaduan', $params);
+        return $this->db->insert_id();
+    }
+
+    function get_lastrow()
+    {
+        $last_idlap = $this->db->order_by('id',"desc")
+            ->limit(1)
+            ->get('pengaduan');
+        return $last_idlap;
+    }
+
 
 }
 

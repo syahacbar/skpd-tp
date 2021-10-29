@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+
 <main id="main" class="main">
 
     <div class="pagetitle">
@@ -8,7 +10,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card mb-4 pt-3">
                 <div class="card-body">
-                    <table class="table datatable" id="datatablesSimple">
+                    <table class="table" id="tablePengguna">
                         <thead>
                             <tr>
                                 <th>No.</th>
@@ -60,3 +62,24 @@
         </div>
     </div>
 </main>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#tablePengguna').DataTable({
+            dom: 'Bfrtip',
+             buttons: {
+        buttons: [
+            {
+                text: 'Tambah Pengguna',
+                action: function ( e, dt, node, config ) {
+                    window.location.href = "<?php echo site_url('auth/create_user');?>";
+                    this.disable(); // disable button
+                }
+            }
+        ]
+    }
+        });
+    });
+</script>

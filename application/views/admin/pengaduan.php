@@ -80,9 +80,9 @@
                                             <td><?php echo $p->status; ?></td>
                                             <td><?php echo $p->tgl_laporan; ?></td>
                                             <td><?php echo $p->kodelaporan; ?></td>
-                                            <td><?php echo $p->pengaduan; ?></td>
+                                            <td><?php echo $p->isi_laporan; ?></td>
                                             <td><?php echo $p->infrastruktur; ?></td>
-                                            <td><?php echo $p->lokasi_namajalan; ?></td>
+                                            <td><?php echo $p->nama_ruasjalan; ?></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
