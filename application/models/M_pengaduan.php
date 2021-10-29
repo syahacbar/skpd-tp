@@ -5,17 +5,18 @@ class M_pengaduan extends CI_Model
 {
     public function get_all()
     {
-        $query = $this->db->get('pengaduan');
-        return $query->result();
+        $query = $this->db->get('pengaduan', 'upload');
+        return $query->result_array();
+
     }
 
-
-    function get_lastrow()
-    {
-        $last_idlap = $this->db->order_by('id', "desc")
-            ->limit(1)
-            ->get('pengaduan');
-        return $last_idlap;
-    }
+    // function add_biodata($params)
+    // {
+    //     $this->db->insert('upload', $params);
+    //     return $this->db->insert_id();
+    // }
 
 }
+
+
+
