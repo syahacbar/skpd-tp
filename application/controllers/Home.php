@@ -2,24 +2,58 @@
 
 class Home extends CI_Controller
 {
-    function __construct()
-    {
-        parent::__construct();
-        $this->load->database();
-        $this->load->helper(array('url','file'));
-        $this->load->model('M_pengaduan');
-        $this->load->model('M_setting');
-        $this->load->model('Ion_auth_model');
-        $this->load->library('recaptcha'); 
+// <<<<<<< main
+//     function __construct()
+//     {
+//         parent::__construct();
+//         $this->load->database();
+//         $this->load->helper(array('url','file'));
+//         $this->load->model('M_pengaduan');
+//         $this->load->model('M_setting');
+//         $this->load->model('Ion_auth_model');
+//         $this->load->library('recaptcha'); 
 
-    }
+//     }
 
-    function index()
-    {
+//     function index()
+//     {
 
-        $data['_view'] = 'public/index';         
-        $this->load->view('public/index', $data);
-    }
+//         $data['_view'] = 'public/index';         
+//         $this->load->view('public/index', $data);
+//     }
+// =======
+//     // function __construct()
+//     // {
+//     //     parent::__construct();
+//     //     $this->load->model('M_lapor');
+//     //     $this->load->model('M_setting');
+//     //     $this->load->library('recaptcha'); 
+//     // }
+
+//     // function index()
+//     // {
+//     //     $recaptcha = $this->recaptcha->create_box();
+//     //     $get_kab = $this->db->query("SELECT * FROM wilayah_2020 WHERE LENGTH(kode) = 5 AND kode LIKE '92%' ORDER BY kode ASC");
+//     //     $data['kabupaten'] = $get_kab->result();
+
+//     //     $last_idlap = $this->M_lapor->get_lastrow();
+//     //     if ($last_idlap->num_rows > 0) {
+//     //         $idlap = (int)$last_idlap->row()->id + 1;
+//     //     } else {
+//     //         $idlap = 1;
+//     //     }
+//     //     $kodelaporan = date("YmdHis") . $idlap;
+
+//     //     $data['jum_lap_drainase'] = $this->M_lapor->get_infrastruktur('drainase')->num_rows();
+//     //     $data['jum_lap_jalan'] = $this->M_lapor->get_infrastruktur('jalan')->num_rows();
+//     //     $data['kodelaporan'] = $kodelaporan;
+//     //     // $data['_view'] = 'public/home';
+//     //     $data['recaptcha'] = $recaptcha;
+//     //     // $data['recaptcha2'] = $recaptcha;
+//     //     $data['_view'] = 'public/index';
+//     //     $this->load->view('public/index', $data);
+//     // }
+// >>>>>>> main
 
 
     function fotoktp()
