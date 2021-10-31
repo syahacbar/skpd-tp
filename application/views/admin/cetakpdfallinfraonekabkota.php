@@ -40,7 +40,7 @@ $html = '
     }
     
 </style>
-<div class="heading">DATA PELAPORAN<br>SEMUA INFRASTRUKTUR<br>'.$kabkota.'</div><br>
+<div class="heading">DATA PELAPORAN<br>SEMUA INFRASTRUKTUR<br>'.$kabkota.'<br>'.$tanggal.'</div><br>
 <table width="100%" border="1" cellpadding="5">
     <tr class="center">
         <th width="30">No.</th>

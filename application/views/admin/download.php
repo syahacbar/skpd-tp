@@ -62,7 +62,7 @@
                                         <label>Ke Tanggal</label>
                                         <div class="form-group">
                                             <div class='input-group date' id='datetimepicker2'>
-                                                <input type="date" class="form-control" name="todate" id="datetimepick" placeholder="Pilih Tanggal Akhir">
+                                                <input type="date" class="form-control" name="todate" id="datetimepick" placeholder="Pilih Tanggal Akhir" value="<?php echo date('Y-m-d');?>">
                                             </div>
                                         </div>
                                     </div>             

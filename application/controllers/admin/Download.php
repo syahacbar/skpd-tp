@@ -33,9 +33,11 @@ class Download extends CI_Controller
             $fil_status = $this->input->post('statuslaporan');
             $fil_dengangambar = $this->input->post('pilihangambar');
 
+            $data['tanggal'] = date_indo($fil_tglawal)." s.d. ".date_indo($fil_tglakhir);
+
             if($fil_formatcetak == "cetakexcel")
             {
-
+                //untuk aksi cetak excel mainkan disini, pendek saja itu scriptnya, buka sisikat punya, gampang itu, ingat ada controller cetakexcel
             } 
             elseif($fil_formatcetak == "cetakpdf")
             {
