@@ -31,7 +31,7 @@ class Pdf extends TCPDF
         <table border="0" width="100%">
         <tr><td align="left"></td>
             <td align="center"></td>
-            <td align="right">&copy; SI-SIKAT 2021</td>
+            <td align="right">&copy; SKPD-TP 2021</td>
         </tr>
         <tr><td align="left"></td>
             <td align="center">Page '.$this->getAliasNumPage().' of '.$this->getAliasNbPages().'</td>

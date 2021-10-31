@@ -1,6 +1,6 @@
 <?php
 $pdf = new Pdf(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
-$pdf->SetTitle('DATA LAPORAN PENGADUAN');
+$pdf->SetTitle('DATA LAPORAN PENGADUAN SEMUA INFRASTRUKTUR '.$kabkota);
 $pdf->SetHeaderMargin(20);
 $pdf->SetTopMargin(10);
 $pdf->setFooterMargin(15);
@@ -40,16 +40,15 @@ $html = '
     }
     
 </style>
-<div class="heading">DATA PELAPORAN<br></div><br>
+<div class="heading">DATA PELAPORAN<br>SEMUA INFRASTRUKTUR<br>'.$kabkota.'</div><br>
 <table width="100%" border="1" cellpadding="5">
     <tr class="center">
         <th width="30">No.</th>
         <th width="60">Tanggal <br>Pengaduan</th>
         <th width="60">Jenis <br>Infrastruktur</th>
-        <th width="90">Isi Laporan/<br>Pengaduan</th>
+        <th width="150">Isi Laporan/<br>Pengaduan</th>
         <th width="70">Nama/<br>Ruas Jalan</th>
         <th width="60">Kec./Distrik</th>
-        <th width="60">Kab./Kota</th>
         <th width="70">Titik Lokasi<br>(Koordinat)</th>
         <th width="70">Nama Pelapor/<br>NIK</th>
         <th width="70">No. HP/<br>Email</th>
@@ -58,20 +57,22 @@ $html = '
     </tr>';
 $no = 1;
 foreach ($pengaduan as $lap) {
+    $noimage = base_url('assets/backend/assets/img/noimage.jpg');
+    
     if ($lap->dokumentasi1 != NULL) {
         $dokumentasi1 = base_url('upload/dokumentasi/') . $lap->dokumentasi1;
     } else {
-        $dokumentasi1 = base_url('resources/admintheme/assets/img/noimage.jpg');
+        $dokumentasi1 = $noimage;
     }
     if ($lap->dokumentasi2 != NULL) {
         $dokumentasi2 = base_url('upload/dokumentasi/') . $lap->dokumentasi2;
     } else {
-        $dokumentasi2 = base_url('resources/admintheme/assets/img/noimage.jpg');
+        $dokumentasi2 = $noimage;
     }
     if ($lap->dokumentasi3 != NULL) {
         $dokumentasi3 = base_url('upload/dokumentasi/') . $lap->dokumentasi3;
     } else {
-        $dokumentasi3 = base_url('resources/admintheme/assets/img/noimage.jpg');
+        $dokumentasi3 = $noimage;
     }
     $html .= '
 <tr>
@@ -81,7 +82,6 @@ foreach ($pengaduan as $lap) {
     <td>' . $lap->isi_laporan . '</td>
     <td>' . $lap->nama_ruasjalan . '</td>
     <td>' . $lap->nama_distrik . '</td>
-    <td>' . $lap->nama_kabkota . '</td>
     <td>' . $lap->latitude . ', ' . $lap->longitude . '</td>
     <td>' . $lap->nama_pelapor . '<br>' . $lap->nik . '</td>
     <td>' . $lap->no_hp . '<br>' . $lap->email . '</td>
@@ -95,4 +95,4 @@ foreach ($pengaduan as $lap) {
 }
 $html .= '</table>';
 $pdf->writeHTML($html, true, false, true, false, '');
-$pdf->Output('DATA LAPORAN PENGADUAN.pdf', 'I');
+$pdf->Output('DATA LAPORAN PENGADUAN SEMUA INFRASTRUKTUR '.$kabkota.'.pdf', 'I');

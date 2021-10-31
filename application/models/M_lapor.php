@@ -9,6 +9,4 @@ class M_lapor extends CI_Model
         return $query->result();
     }
 
-
-    
 }

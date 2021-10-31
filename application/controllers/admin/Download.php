@@ -6,7 +6,7 @@ class Download extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('M_pengaduan');
+        $this->load->model(['M_pengaduan','M_wilayah']);
 
     }
 
@@ -19,97 +19,64 @@ class Download extends CI_Controller
         $this->load->view('admin/layout', $data);
     }
 
-
     function cetakpdf()
     {
         $this->load->library('Pdf');
-        $infrastruktur = $this->input->post('pilihinfra', TRUE);
-        $kabupaten = $this->input->post('kabupaten', TRUE);
-        $startdate = $this->input->post('startdate', TRUE);
-        $todate = $this->input->post('todate', TRUE);
-        $dok = $this->input->post('pilihangambar',TRUE);
-        $formatcetak = $this->input->post('formatcetak',TRUE);
-        $status = $this->input->post('statuslaporan',TRUE);
-        
-        $data['pengaduan'] = $this->M_pengaduan->get_all();
 
-        $this->load->view('admin/cetakpdfall',$data);
-
-
-        
-        if ($formatcetak == 'cetakexcel')
+        if(!empty($_POST))
         {
-            if($kabupaten == NULL || $kabupaten == 'semua')
-            {            
-                $namakab = 'Semua Kab/Kota';
-            } else {
-                $namakab = $this->M_pengaduan->get_kabkota($kabupaten)->nama;
-            }
+            $fil_jenisinfra = $this->input->post('pilihinfra');
+            $fil_kabkota = $this->input->post('kabupaten');
+            $fil_tglawal = $this->input->post('startdate');
+            $fil_tglakhir = $this->input->post('todate');
+            $fil_formatcetak = $this->input->post('formatcetak');
+            $fil_status = $this->input->post('statuslaporan');
+            $fil_dengangambar = $this->input->post('pilihangambar');
 
-            if($infrastruktur == NULL || $infrastruktur == 'semua')
+            if($fil_formatcetak == "cetakexcel")
             {
-                $namainf = 'Semua Infrastruktur';
-            } else {
-                 $namainf = $infrastruktur;
-            }
-            $this->cetakexcel($infrastruktur,$kabupaten,$startdate,$todate,$range,$status,$namakab,$namainf);
 
-        } elseif ($formatcetak == 'cetakpdf')
-        { 
-            $data['pengaduan'] = $this->M_pengaduan->get_cetak_pengaduan($infrastruktur,$kabupaten,$startdate,$todate,NULL,NULL,NULL,'tgl_laporan','DESC',$status);
-            if($infrastruktur != NULL && $kabupaten != NULL && $status != NULL)
+            } 
+            elseif($fil_formatcetak == "cetakpdf")
             {
-                if ($infrastruktur == 'semua' && $kabupaten == 'semua')
+                if($fil_jenisinfra == 'Semua' && $fil_kabkota == 'Semua')
                 {
-                    $data['range'] = $range;
-                    if($dok == '1')
-                    {
-                        $this->load->view('admin/cetakpdfallinfraallkabkota',$data);
-                    } elseif ($dok == '0')
-                    {
-                        $this->load->view('admin/cetakpdfallinfraallkabkotanodok',$data);
-                    }
-                    
-                } elseif ($infrastruktur == 'semua' && $kabupaten != 'semua') {
-                    $data['kabupaten'] = $this->M_pengaduan->get_kabkota($kabupaten)->nama;
-                    $data['range'] = $range;
-
-                    if($dok == '1')
-                    {
-                        $this->load->view('admin/cetakpdfallinfraonekabkota',$data);
-                    } elseif ($dok == '0')
-                    {
-                        $this->load->view('admin/cetakpdfallinfraonekabkotanodok',$data);
-                    }
-                } elseif ($infrastruktur != 'semua' && $kabupaten == 'semua') {
-                    $data['infrastruktur'] = $infrastruktur;
-                    $data['range'] = $range;
-
-                    if($dok == '1')
-                    {
-                        $this->load->view('admin/cetakpdfoneinfraallkabkota',$data);
-                    } elseif ($dok == '0')
-                    {
-                        $this->load->view('admin/cetakpdfoneinfraallkabkota ',$data);
-                    }
-                    
-                } elseif ($infrastruktur != 'semua' && $kabupaten != 'semua') {
-                    $data['infrastruktur'] = $infrastruktur;
-                    $data['range'] = $this->M_pengaduan->get_kabkota($kabupaten)->nama;
-                    $data['kabupaten'] = $range;
-
-                    if($dok == '1')
-                    {
-                        $this->load->view('admin/cetakpdfoneinfraonekabkota',$data);
-                    } elseif ($dok == '0')
-                    {
-                        $this->load->view('admin/cetakpdfoneinfraonekabkotanodok',$data);
-                    }
-                    
-                } 
+                    $data['pengaduan'] = $this->M_pengaduan->get_filter(NULL,NULL,NULL,$fil_status,$fil_tglawal,$fil_tglakhir);
+                    $this->load->view('admin/cetakpdfallinfraallkabkota',$data);
+                }
+                elseif($fil_jenisinfra == 'Semua' && $fil_kabkota != 'Semua')
+                {
+                    $namakabkota = $this->M_wilayah->get_by_id($fil_kabkota);
+                    $data['kabkota'] = strtoupper($namakabkota->nama);
+                    $data['pengaduan'] = $this->M_pengaduan->get_filter(NULL,$fil_kabkota,$fil_status,$fil_tglawal,$fil_tglakhir);
+                    $this->load->view('admin/cetakpdfallinfraonekabkota',$data);
+                }
+                elseif($fil_jenisinfra != 'Semua' && $fil_kabkota == 'Semua')
+                {
+                    $data['infrastruktur'] = strtoupper($fil_jenisinfra);
+                    $data['pengaduan'] = $this->M_pengaduan->get_filter($fil_jenisinfra,NULL,$fil_status,$fil_tglawal,$fil_tglakhir);
+                    $this->load->view('admin/cetakpdfoneinfraallkabkota',$data);                    
+                }
+                elseif($fil_jenisinfra != 'Semua' && $fil_kabkota != 'Semua')
+                {
+                    $namakabkota = $this->M_wilayah->get_by_id($fil_kabkota);
+                    $data['kabkota'] = strtoupper($namakabkota->nama);
+                    $data['infrastruktur'] = strtoupper($fil_jenisinfra);
+                    $data['pengaduan'] = $this->M_pengaduan->get_filter($fil_jenisinfra,$fil_kabkota,$fil_status,$fil_tglawal,$fil_tglakhir);
+                    $this->load->view('admin/cetakpdfoneinfraonekabkota',$data);                    
+                }
             }
-        }
+            else
+            {
+                redirect('admin/download');
+            }
 
+            
+        }
+        else
+        {
+           redirect('admin/download');
+        }
     }
 
     function cetakpdfallinfra()

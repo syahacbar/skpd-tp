@@ -11,11 +11,10 @@ class Pengaduan extends CI_Controller
 
     public function index()
     {
-
         $data['pengaduan'] = $this->M_pengaduan->get_all();
         $data['_view'] = 'admin/pengaduan';
         $this->load->view('admin/layout', $data);
-    }
+    } 
 
     public function insertdummy($jumlah)
     {

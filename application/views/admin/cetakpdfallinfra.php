@@ -40,12 +40,13 @@ $html = '
     }
     
 </style>
-<div class="heading">DATA PELAPORAN<br></div><br>
+<div class="heading">DATA PELAPORAN<br>SEMUA INFRASTRUKTUR</div><br>
 <table width="100%" border="1" cellpadding="5">
     <tr class="center">
         <th width="30">No.</th>
         <th width="60">Tanggal <br>Pengaduan</th>
-        <th width="140">Isi Laporan/<br>Pengaduan</th>
+        <th width="60">Jenis <br>Infrastruktur</th>
+        <th width="100">Isi Laporan/<br>Pengaduan</th>
         <th width="70">Nama/<br>Ruas Jalan</th>
         <th width="60">Kec./Distrik</th>
         <th width="60">Kab./Kota</th>
@@ -57,25 +58,27 @@ $html = '
     </tr>';
 $no = 1;
 foreach ($pengaduan as $lap) {
+    $noimage = base_url('assets/backend/assets/img/noimage.jpg');
     if ($lap->dokumentasi1 != NULL) {
         $dokumentasi1 = base_url('upload/dokumentasi/') . $lap->dokumentasi1;
     } else {
-        $dokumentasi1 = base_url('resources/admintheme/assets/img/noimage.jpg');
+        $dokumentasi1 = $noimage;
     }
     if ($lap->dokumentasi2 != NULL) {
         $dokumentasi2 = base_url('upload/dokumentasi/') . $lap->dokumentasi2;
     } else {
-        $dokumentasi2 = base_url('resources/admintheme/assets/img/noimage.jpg');
+        $dokumentasi2 = $noimage;
     }
     if ($lap->dokumentasi3 != NULL) {
         $dokumentasi3 = base_url('upload/dokumentasi/') . $lap->dokumentasi3;
     } else {
-        $dokumentasi3 = base_url('resources/admintheme/assets/img/noimage.jpg');
+        $dokumentasi3 = $noimage;
     }
     $html .= '
 <tr>
     <td align="center">' . $no++ . '</td>
     <td>' . shortdate_indo(substr($lap->tgl_laporan,0,10)) . '</td>
+    <td>' . $lap->infrastruktur . '</td>
     <td>' . $lap->isi_laporan . '</td>
     <td>' . $lap->nama_ruasjalan . '</td>
     <td>' . $lap->nama_distrik . '</td>
