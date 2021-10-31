@@ -38,6 +38,21 @@ body {
     background-size: contain;
 }
 
+.btn-loginpage {
+    background: linear-gradient(90deg, rgba(244, 129, 63, 1) 0%, rgba(243, 119, 73, 1) 51%, rgba(241, 86, 105, 1) 100%);
+    border: 0;
+    border-radius: 30px;
+  }
+
+  .card-loginpage {
+    border-radius: 30px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
 </style>
 </head>
 
@@ -58,7 +73,7 @@ body {
                 </a>
               </div><!-- End Logo -->
 
-              <div class="card mb-3">
+              <div class="card mb-3 card-loginpage">
 
                 <div class="card-body">
 
@@ -71,7 +86,7 @@ body {
                     <?php echo form_open("auth/login");?>
 
                     <div class="col-12">
-                      <label for="identity" class="form-label">Email/Nama Pengguna</label>
+                      <label for="identity" class="form-label">Email/Username</label>
                         <input type="text" name="identity" class="form-control" id="identity" required>
                         <div class="invalid-feedback">Email atau Nama Pengguna harus diisi!</div>
                     </div>
@@ -87,7 +102,7 @@ body {
                     </div>
 
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" name="submit" type="submit">MASUK</button>
+                      <button class="btn btn-primary w-100 btn-loginpage" name="submit" type="submit">MASUK</button>
                     </div>
 
                   <?php echo form_close();?>

@@ -97,6 +97,57 @@ class Lapor extends CI_Controller
         }
     }
 
+
+    function uploaddokumentasi1()
+    {
+            $config['upload_path']   = FCPATH.'/upload/dokumentasi/';
+            $config['allowed_types'] = '*';
+            $this->load->library('upload',$config);
+
+            if($this->upload->do_upload('filedokumentasi1')){
+                $token=$this->input->post('token_dokumentasi');
+                $kodelaporan=$this->input->post('kodelaporan');
+                $nama=$this->upload->data('file_name');
+                $kategori='dokumentasi1';
+                $uploaded_on=date("Y-m-d H:i:s");
+                $this->db->insert('upload',array('nama_file'=>$nama,'token'=>$token,'kategori'=>$kategori,'uploaded_on'=>$uploaded_on,'kodelaporan'=>$kodelaporan));
+            }
+
+    }
+
+    function uploaddokumentasi2()
+    {
+            $config['upload_path']   = FCPATH.'/upload/dokumentasi/';
+            $config['allowed_types'] = '*';
+            $this->load->library('upload',$config);
+
+            if($this->upload->do_upload('filedokumentasi2')){
+                $token=$this->input->post('token_dokumentasi');
+                $kodelaporan=$this->input->post('kodelaporan');
+                $nama=$this->upload->data('file_name');
+                $kategori='dokumentasi2';
+                $uploaded_on=date("Y-m-d H:i:s");
+                $this->db->insert('upload',array('nama_file'=>$nama,'token'=>$token,'kategori'=>$kategori,'uploaded_on'=>$uploaded_on,'kodelaporan'=>$kodelaporan));
+            }
+
+    }
+
+    function uploaddokumentasi3()
+    {
+            $config['upload_path']   = FCPATH.'/upload/dokumentasi/';
+            $config['allowed_types'] = '*';
+            $this->load->library('upload',$config);
+
+            if($this->upload->do_upload('filedokumentasi3')){
+                $token=$this->input->post('token_dokumentasi');
+                $kodelaporan=$this->input->post('kodelaporan');
+                $nama=$this->upload->data('file_name');
+                $kategori='dokumentasi3';
+                $uploaded_on=date("Y-m-d H:i:s");
+                $this->db->insert('upload',array('nama_file'=>$nama,'token'=>$token,'kategori'=>$kategori,'uploaded_on'=>$uploaded_on,'kodelaporan'=>$kodelaporan));
+            }
+
+    }
     function cobamap()
     {
 		$this->load->view('map');
