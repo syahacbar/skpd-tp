@@ -236,26 +236,28 @@ footer .social li a {
     color: #fff;
 }
 
+#unggahfotoktp button.btn.btn-primary,
 #buktiLaporan button.btn.btn-primary {
     margin-bottom: -30px;
     background: transparent;
     border: transparent;
 }
 
+#unggahfotoktp button.btn.btn-primary i,
 #buktiLaporan button.btn.btn-primary i {
     color: #f47e42;
     font-size: 28px;
     background: #fff;
 }
 
-
+#unggahfotoktp button:focus,
 #buktiLaporan button:focus {
     outline:none !important;
     background-color: transparent !important;
     border: 0 !important;
  }
 
-
+#unggahfotoktp button.btn.btn-primary:hover,
 #buktiLaporan button.btn.btn-primary:hover {
     background-color: transparent;
     border: 0 !important;
@@ -271,14 +273,15 @@ footer .social li a {
     box-shadow: none;
 }
 
-
+/*div#unggahfotoktp,*/
 div#dokumentasi,
 div#ktp {
     /*border: 2px solid #f47e42;*/
     border: 1px solid #ced4da;
-    height: 170px;
+    height: 200px;
 }
 
+div#modalKTP img,
 div#modalBantuan img,
 div#modalBantuan1 img,
 div#modalBantuan2 img {
@@ -288,6 +291,7 @@ div#modalBantuan2 img {
     margin-top: 10px;
 }
 
+div#unggahfotoktp .dz-message:before,
 div#dokumentasi .dz-message:before,
 div#ktp .dz-message:before {
     content: " ";
@@ -299,6 +303,7 @@ div#ktp .dz-message:before {
     display: block;
 }
 
+div#unggahfotoktp .dz-message,
 div#dokumentasi .dz-message,
 div#ktp .dz-message {
     font-size: 14px;
@@ -308,5 +313,14 @@ div#ktp .dz-message {
 
 textarea#nama_ruasjalan {
     height: 125px;
+}
+
+/* Recaptcha di manapun berada */
+.g-recaptcha>div:nth-child(1) {
+    width: 100% !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 

@@ -219,7 +219,7 @@
                     <h1>Form Pengaduan</h1>
                 </div>
             </div>
-            <div class="row mb-4 header-formlap">
+            <div class="row mb-3 header-formlap">
                 <div class="left-text col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-2">
                     <h4>Data Pelapor</h4>
                 </div>
@@ -233,18 +233,59 @@
                     <form id="formlapor" method="POST" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label>NIK</label>
-                                <input type="text" class="form-control" name="nik" id="nik" requireda>
+                            <div id="unggahfotoktp" class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Unggah KTP</label>
+                                       <div class="alert alert-warning alert-dismissible fade show peringatan mb-0" role="alert">
+                                            <strong>Tips!</strong> Silakan unggah foto KTP Anda. Foto harus jelas!
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalKTP">
+                                            <i class="bi bi-info-square-fill"></i>
+                                        </button>
+                                        <div id="ktp" class="dropzone ktp">
+                                            <div class="dz-message">Klik atau drop foto KTP ke sini</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Nama Lengkap</label>
-                                <input type="text" class="form-control" name="nama_pelapor" id="nama_pelapor" requireda>
-                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>NIK</label>
+                                        <input type="text" class="form-control" name="nik" id="nik" requireda>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Nama Lengkap</label>
+                                        <input type="text" class="form-control" name="nama_pelapor" id="nama_pelapor" requireda>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Alamat Email</label>
+                                        <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" requireda>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Nomor WhatsApp</label>
+                                        <input type="text" class="form-control" name="no_hp" id="no_hp" requireda>
+                                    </div>
+                                </div>
+                            </div>  
                         </div>
+
 
                     </div>
 
@@ -296,37 +337,10 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Alamat Email</label>
-                                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" requireda>
-                            </div>
-                        </div>
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Nomor WhatsApp</label>
-                                <input type="text" class="form-control" name="no_hp" id="no_hp" requireda>
-                            </div>
-                        </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label>Unggah KTP</label>
-                               <div class="alert alert-warning alert-dismissible fade show peringatan" role="alert">
-                                    <strong>Tips!</strong> Silakan unggah foto KTP Anda. Foto harus jelas!
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div id="ktp" class="dropzone ktp">
-                                    <div class="dz-message">Klik atau drop foto KTP ke sini</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
 
 
                     <div class="row">
@@ -375,21 +389,21 @@
 
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="infrastruktur" id="jalan" value="option1" requireda>
+                                <input class="form-check-input" type="radio" name="infrastruktur" id="jalan" value="Jalan" requireda>
                                 <label class="form-check-label" for="jalan">Jalan</label>
                             </div>
                         </div>
 
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="infrastruktur" id="drainase" value="option2" requireda>
+                                <input class="form-check-input" type="radio" name="infrastruktur" id="drainase" value="Drainase" requireda>
                                 <label class="form-check-label" for="drainase">Drainase</label>
                             </div>
                         </div>
 
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="infrastruktur" id="jembatan" value="option3" requireda>
+                                <input class="form-check-input" type="radio" name="infrastruktur" id="jembatan" value="Jembatan" requireda>
                                 <label class="form-check-label" for="jembatan">Jembatan</label>
                             </div>
                         </div>
@@ -495,8 +509,8 @@
                         </div>
                     </div>
 
-                    <div class="">
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="captchalaporan">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-0">
                             <div class="form-group">
                                 <center><?php echo $recaptcha; ?></center>
                             </div>
@@ -664,6 +678,28 @@
     <!-- Akhir Modal Bantuan -->
 
 
+    <!-- Modal Panduan Unggah KTP -->
+    <div class="modal fade" id="modalKTP" tabindex="-1" role="dialog" aria-labelledby="modalKTPLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalKTPLabel">Info!</h5>
+                    <!-- <span aria-hidden="true">&times;</span> -->
+                    </button>
+                </div>
+                <div class="modal-body">
+                Format foto yang diizinkan adalah .jpg, .png, dan .jpeg.
+                    <img src="<?php echo base_url('assets/frontend/assets/images/ktp.jpg') ?>" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Akhir Modal Bantuan -->
+
+
     <!-- Modal Login Anggota-->
     <div class="modal fade" id="loginAdmin" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -800,6 +836,63 @@
             a.token = Math.random();
             c.append("token_foto", a.token); //Menmpersiapkan token untuk masing masing foto
             c.append("kodelaporan", $('#kodelaporan').val());
+        });
+
+        var dokumentasi1_upload = new Dropzone(".dokumentasi1", {
+            autoProcessQueue: true,
+            url: "<?php echo site_url('lapor/uploaddokumentasi1') ?>",
+            maxFilesize: 50,
+            maxFiles: 1,
+            method: "post",
+            acceptedFiles: "image/*",
+            paramName: "filedokumentasi1",
+            dictInvalidFileType: "Type file ini tidak dizinkan",
+            addRemoveLinks: true,
+        });
+
+        dokumentasi1_upload.on("sending", function(a, b, c) {
+            a.token = Math.random();
+            c.append("token_dokumentasi", a.token); //Menmpersiapkan token untuk masing masing foto
+            c.append("kodelaporan", $('#kodelaporan').val());
+            c.append("kategori", "dokumentasi1");
+        });
+
+        var dokumentasi2_upload = new Dropzone(".dokumentasi2", {
+            autoProcessQueue: true,
+            url: "<?php echo site_url('lapor/uploaddokumentasi2') ?>",
+            maxFilesize: 50,
+            maxFiles: 1,
+            method: "post",
+            acceptedFiles: "image/*",
+            paramName: "filedokumentasi2",
+            dictInvalidFileType: "Type file ini tidak dizinkan",
+            addRemoveLinks: true,
+        });
+
+        dokumentasi2_upload.on("sending", function(a, b, c) {
+            a.token = Math.random();
+            c.append("token_dokumentasi", a.token); //Menmpersiapkan token untuk masing masing foto
+            c.append("kodelaporan", $('#kodelaporan').val());
+            c.append("kategori", "dokumentasi2");
+        });
+        
+        var dokumentasi3_upload = new Dropzone(".dokumentasi3", {
+            autoProcessQueue: true,
+            url: "<?php echo site_url('lapor/uploaddokumentasi3') ?>",
+            maxFilesize: 50,
+            maxFiles: 1,
+            method: "post",
+            acceptedFiles: "image/*",
+            paramName: "filedokumentasi3",
+            dictInvalidFileType: "Type file ini tidak dizinkan",
+            addRemoveLinks: true,
+        });
+
+        dokumentasi3_upload.on("sending", function(a, b, c) {
+            a.token = Math.random();
+            c.append("token_dokumentasi", a.token); //Menmpersiapkan token untuk masing masing foto
+            c.append("kodelaporan", $('#kodelaporan').val());
+            c.append("kategori", "dokumentasi3");
         });
 
 

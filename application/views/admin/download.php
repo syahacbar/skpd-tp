@@ -13,122 +13,139 @@
                     Filter Data Laporan/Pengaduan Yang Akan Diunduh
                 </div>
                 <div class="card-body">
-                    <!-- <?php // echo form_open('admin/cetak', array('id' => 'formfiltercetak', 'target' => '_blank')); 
-                            ?> -->
-                    <div class="row">
-                        <label for="country" class="control-label">Jenis Infrastruktur</label>
-                        <select id="filterStatus" name="filterStatus" aria-controls="filterStatus" class="custom-select custom-select-sm form-control form-control-sm form-select"></i>
-                            <option value="">- Pilih Semua Infrastruktur - </option>
-                            <option value="Menunggu">Jalan</option>
-                            <option value="Menunggu">Drainase</option>
-                            <option value="Diterima">Jembatan</option>
-                        </select>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <label for="country" class="control-label">Kabupaten/Kota</label>
-                        <div class="col">
-                            <select class="form-control" name="kabupaten" id="kabupaten">
-                                <option value="semua">- Semua Kabupaten/Kota -</option>
-                                <!-- <?php
-                                        //foreach ($kabupaten as $kab) {
-                                        //echo '<option value="' . $kab->kode . '">' . $kab->nama . '</option>';
-                                        //}
-                                        ?> -->
-                            </select>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <label class="control-label" for="datetimepick">Rentang Waktu</label>
-                        <div class='col'>
-                            <div class="form-group">
-                                <div class='input-group date' id='datetimepicker1'>
-                                    <input type="date" class="form-control" name="startdate" id="datetimepick" placeholder="Pilih Tanggal Awal">
-                                </div>
+                    <!-- <form action="" method="POST" enctype="multipart/form-data"> -->
+                    <?php echo form_open('download/cetakpdf', array('id' => 'formfiltercetak', 'target' => '_blank')); ?>
+                <div class="row mt-3">
+                    <div class="col">
+                        <div class="row mt-3">
+                            <div class="col-sm-6">
+                                <label for="country" class="control-label">Jenis Infrastruktur</label>
+                                <select id="pilihinfra" name="pilihinfra" aria-controls="pilihinfra" class="custom-select custom-select-sm form-control form-control-sm form-select"></i>
+                                    <option value="semua">- Pilih Semua Infrastruktur - </option>
+                                    <option value="jalan">Jalan</option>
+                                    <option value="drainase">Drainase</option>
+                                    <option value="jembatan">Jembatan</option>
+                                </select>
                             </div>
-                        </div>
-                        <div class='col'>
-                            <div class="form-group">
-                                <div class='input-group date' id='datetimepicker2'>
-                                    <input type="date" class="form-control" name="todate" id="datetimepick" placeholder="Pilih Tanggal Akhir">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <label for="country" class="control-label">Pilih Format Laporan</label>
-                        <div class="col">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="RBFormatCetak" id="RBInfrastruktur" value="cetakpdf" required>
-                                        <label class="form-check-label">PDF</label>
-                                    </div>
-                                </div>
 
+                            <div class="col-sm-6">
+                                <label for="country" class="control-label">Kabupaten/Kota</label>
                                 <div class="col">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="RBFormatCetak" id="RBInfrastruktur" value="cetakexcel" required>
-                                        <label class="form-check-label">EXCEL</label>
-                                    </div>
+                                    <select class="form-control" name="kabupaten" id="kabupaten">
+                                        <option value="semua">- Semua Kabupaten/Kota -</option>
+                                        <?php
+                                                foreach ($kabupaten as $kab) {
+                                                echo '<option value="' . $kab->kode . '">' . $kab->nama . '</option>';
+                                                } ?>
+                                    </select>
+                                </div>
+                            </div> 
+                        </div>
+                            
+                        <div class="row mt-3">
+                            <div class="col-sm-12">
+                                <!-- <label class="control-label" for="datetimepick">Rentang Waktu</label> -->
+                                <div class="alert alert-info" role="alert">
+                                    <strong>Rentang Waktu:</strong> Pilih batas awal dan akhir laporan yang akan diambil.
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <label for="country" class="control-label">Pilih Status Pelaporan</label>
-                        <div class="col">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="RBStatuslap" value="Diterima">
-                                        <label class="form-check-label">Diterima</label>
-                                    </div>
-                                </div>
 
-                                <div class="col">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="RBStatuslap" value="Ditolak">
-                                        <label class="form-check-label">Ditolak</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <label for="country" class="control-label">Dengan Gambar Dokumentasi</label>
-                        <div class="col">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="RBDok" value="1">
-                                        <label class="form-check-label">Ya</label>
-                                    </div>
-                                </div>
 
-                                <div class="col">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="RBDok" value="0">
-                                        <label class="form-check-label">Tidak</label>
+                            <div class='col-sm-6'>
+                                <label>Dari Tanggal</label>
+                                <div class="form-group">
+                                    <div class='input-group date' id='datetimepicker1'>
+                                        <input type="date" class="form-control" name="startdate" id="datetimepick" placeholder="Pilih Tanggal Awal">
                                     </div>
                                 </div>
                             </div>
+                            <div class='col-sm-6'>
+                                <label>Ke Tanggal</label>
+                                <div class="form-group">
+                                    <div class='input-group date' id='datetimepicker2'>
+                                        <input type="date" class="form-control" name="todate" id="datetimepick" placeholder="Pilih Tanggal Akhir">
+                                    </div>
+                                </div>
+                            </div>             
+                        </div>  
+
+                        <div class="row mt-3"> 
+                            <div class="col-lg-12">
+                                <label for="country" class="control-label">Pilih Format Laporan</label>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="formatcetak" id="pilihinfra" value="cetakpdf" required>
+                                    <label class="form-check-label">PDF</label>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="formatcetak" id="pilihinfra" value="cetakexcel" required>
+                                    <label class="form-check-label">EXCEL</label>
+                                </div>
+                            </div>
+                        </div>  
+
+                        <div class="row mt-3">
+                            <div class="col-sm-12">
+                                <label for="country" class="control-label">Pilih Status Pelaporan</label>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="statuslaporan" value="Diterima">
+                                    <label class="form-check-label">Diterima</label>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="statuslaporan" value="Ditolak">
+                                    <label class="form-check-label">Ditolak</label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="input-group">
-                            <button class="btn btn-sm btn-primary" type="submit">Download</button>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-12">
+                                <label for="country" class="control-label">Dengan Gambar Dokumentasi</label>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pilihangambar" value="1">
+                                    <label class="form-check-label">Ya</label>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pilihangambar" value="0">
+                                    <label class="form-check-label">Tidak</label>
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="row mt-4">
+                            <div class="input-group">
+                                <a class="btn btn-sm btn-primary" name="submit" type="submit">Download</a>
+                            </div>
+                        </div>
+
                     </div>
+                </div>
+
 
                 </div>
-                <!-- <?php // echo form_close(); 
-                        ?> -->
+            </div>
+
+
+                </div>
+                <?php echo form_close(); ?>
+            <!-- </form> -->
             </div>
         </div>
     </div>
