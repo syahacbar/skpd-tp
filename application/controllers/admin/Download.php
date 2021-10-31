@@ -41,7 +41,7 @@ class Download extends CI_Controller
             {
                 if($fil_jenisinfra == 'Semua' && $fil_kabkota == 'Semua')
                 {
-                    $data['pengaduan'] = $this->M_pengaduan->get_filter(NULL,NULL,NULL,$fil_status,$fil_tglawal,$fil_tglakhir);
+                    $data['pengaduan'] = $this->M_pengaduan->get_filter(NULL,NULL,$fil_status,$fil_tglawal,$fil_tglakhir);
                     $this->load->view('admin/cetakpdfallinfraallkabkota',$data);
                 }
                 elseif($fil_jenisinfra == 'Semua' && $fil_kabkota != 'Semua')
