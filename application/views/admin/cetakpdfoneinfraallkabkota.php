@@ -80,7 +80,7 @@ foreach ($pengaduan as $lap) {
     <td>' . shortdate_indo(substr($lap->tgl_laporan,0,10)) . '</td>
     <td>' . $lap->isi_laporan . '</td>
     <td>' . $lap->nama_ruasjalan . '</td>
-    <td>' . $lap->nama_kabkota . '</td>
+    <td>' . ucwords(strtolower($lap->nama_kabkota)). '</td>
     <td>' . $lap->nama_distrik . '</td>
     <td>' . $lap->latitude . ', ' . $lap->longitude . '</td>
     <td>' . $lap->nama_pelapor . '<br>' . $lap->nik . '</td>

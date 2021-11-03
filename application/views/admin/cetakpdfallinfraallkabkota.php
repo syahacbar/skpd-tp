@@ -83,7 +83,7 @@ foreach ($pengaduan as $lap) {
     <td>' . $lap->isi_laporan . '</td>
     <td>' . $lap->nama_ruasjalan . '</td>
     <td>' . $lap->nama_distrik . '</td>
-    <td>' . $lap->nama_kabkota . '</td>
+    <td>' . ucwords(strtolower($lap->nama_kabkota)) . '</td>
     <td>' . $lap->latitude . ', ' . $lap->longitude . '</td>
     <td>' . $lap->nama_pelapor . '<br>' . $lap->nik . '</td>
     <td>' . $lap->no_hp . '<br>' . $lap->email . '</td>

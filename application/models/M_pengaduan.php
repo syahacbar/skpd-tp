@@ -24,6 +24,9 @@ class M_pengaduan extends CI_Model
     function get_filter($inf=NULL,$kab=NULL,$status=NULL,$startdate=NULL,$todate=NULL)
     {
         $this->db->select("p.*");
+        $this->db->select("(SELECT nama FROM wilayah_2020 WHERE kode=p.kab_pelapor) AS nama_kabpelapor");
+        $this->db->select("(SELECT nama FROM wilayah_2020 WHERE kode=p.kec_pelapor) AS nama_kecpelapor");
+        $this->db->select("(SELECT nama FROM wilayah_2020 WHERE kode=p.des_pelapor) AS nama_despelapor");
         $this->db->select("(SELECT nama FROM wilayah_2020 WHERE kode=p.lokasi_kabkota) AS nama_kabkota");
         $this->db->select("(SELECT nama FROM wilayah_2020 WHERE kode=p.lokasi_distrik) AS nama_distrik");
         $this->db->select("(SELECT u1.nama_file FROM upload u1 WHERE u1.kategori ='dokumentasi1' AND u1.kodelaporan = p.kodelaporan) AS dokumentasi1");
