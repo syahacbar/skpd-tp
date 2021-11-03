@@ -1,0 +1,1831 @@
+/* header */
+.bar.bar-custom {
+    border: 0 !important;
+    background-color: #d5b026 !important;
+    background-image: none !important;
+    color: #ffffff !important;
+}
+
+.bar.bar-custom .title {
+    color: #ffffff !important;
+    left: 0 !important;
+    right: 0 !important;
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+
+/*.bar.bar-custom span.secondary-buttons button[ng-click="right_button.action()"],
+.bar.bar-custom button[ng-click="goBack()"],
+.bar.bar-custom span.secondary-buttons button [ng-if="is_chat_enable"],
+.bar.bar-custom .buttons.buttons-left.header-item button {
+    background-color: #fffff !important;
+    margin: 0;
+    padding: 0 !important;
+    width: 40px !important;
+    height: 30px !important;
+    border-radius: 5px;
+    box-shadow: inset 3px 3px 8px #fffff, inset -3px -3px 8px #fffff !important;
+    font-size: 0;
+}*/
+/*
+.bar.bar-custom span.secondary-buttons button[ng-if="is_chat_enable"] {
+    font-size: 0;
+    background-image: url(https://cnmarketing.co.za/wp-admin/upload.php?item=33392);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    width: 100%;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    margin: 0 !important;
+    width: 40px !important;
+    height: 30px !important;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: inset 3px 3px 8px #ffffff, inset -3px -3px 8px #ffffff !important;
+}
+
+.bar.bar-custom span.secondary-buttons button[ng-if="is_chat_enable"] .ion-chatboxes::before {
+    font-size: 0 !important;
+}*/
+
+/*.bar.bar-custom span.secondary-buttons button[ng-click="right_button.action()"] span span {
+    font-size: 0;
+    background-image: url(https://cnmarketing.co.za/wp-admin/upload.php?item=33392);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    width: 100%;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    margin: 0 !important;
+}
+*/
+
+span.secondary-buttons button.button.button-clear.header-item i.icon.ion-chatboxes.chat-history,
+button[ng-click="goBack()"] .ion-arrow-left-c:before,
+.buttons.buttons-left.header-item button i.icon.ion-navicon-round,
+span.secondary-buttons button.button.button-clear.header-item i.icon.ion-ios-cart {
+    color: #ffffff !important;
+    margin: 0 !important;
+}
+
+
+
+/* Front Page */
+ion-view[state="commercepro-category-list"] {
+    background-image: none !important;
+}
+
+ion-view[state="commercepro-category-list"] ion-content,
+ion-view[state="commercepro-category-list"] ion-header-bar {
+    background-color: #ffffff !important;
+}
+
+ion-view[state="commercepro-category-list"] ion-content {
+    padding-top: 35px;
+    margin-top: -70px;
+}
+
+ion-view[state="commercepro-category-list"] ion-header-bar.bar-subheader.list.m-0.bar.bar-header {
+    min-height: 95px !important;
+    background-color: transparent !important;
+}
+
+
+ion-view[state="commercepro-category-list"] ion-content .list .item.item-custom {
+    border: 0 !important;
+    background-color: transparent !important;
+    color: #000000 !important;
+}
+
+
+/* category subtitle */
+ion-header-bar.bar-subheader.list.m-0.bar.bar-header {
+    border: 0 !important;
+    background-image: none;
+}
+
+ion-view[state="commercepro-category-list"] ion-header-bar.bar-subheader.list.m-0.bar.bar-header ion-item.item.item-custom.store-cat {
+    border: 0;
+    box-shadow: none;
+    background-color: transparent !important;
+    height: 60px;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+ion-view[state="commercepro-category-list"] ion-header-bar.bar-subheader.list.m-0.bar.bar-header ion-item.item.item-custom.store-cat [ng-show="labels.category_text"] {
+    font-size: 18px;
+    display: none;
+    line-height: 2;
+}
+
+.list.all-stores>ion-item.item-custom.item>h2>b.ng-binding {
+    display: none;
+}
+
+ion-view[state="commercepro-category-list"] .pro-categories .left.active .category-image,
+ion-view[state="commercepro-category-list"] .pro-categories .left .category-image {
+    display: none;
+}
+
+/* label name - category */
+ion-view[state="commercepro-category-list"] .category-label span.ng-binding {
+    font-size: 12px;
+}
+
+ion-view[state="commercepro-category-list"] .left.active .category-label span {
+    background-color: #d5b026;
+    padding: 5px 20px;
+    border-radius: 50px;
+    color: #000000;
+    border: 0;
+    text-align: right;
+    font-weight: normal;
+}
+
+
+ion-view[state="commercepro-category-list"] label.item.item-input.p-0.pl-10.brd-rad-50 input#search {
+    padding: 10px;
+}
+
+ion-view[state="commercepro-category-list"] label.item.item-input.p-0.pl-10.brd-rad-50 {
+    border-radius: 10px !important;
+    border: 0 !important;
+    background-color: #d5b026;
+    background-image: url(https://ensiklopediakesaguan.com/wp-content/uploads/2021/04/search-outline.svg);
+    background-position: center right 10px;
+    background-repeat: no-repeat;
+    background-size: 24px;
+}
+
+
+ion-view[state="commercepro-category-list"] i.icon.ion-qr-scanner,
+ion-view[state="commercepro-category-list"] i.icon.ion-location {
+    color: #000
+}
+
+ion-view[state="commercepro-category-list"] .item.item-cards.p-0.animate__animated.animate__fadeInUp .row.p-0 {
+    box-shadow: none;
+    display: inline-block;
+    width: 100%;
+}
+
+ion-view[state="commercepro-category-list"] .item.item-cards.p-0.animate__animated.animate__fadeInUp .row.p-0 .col-30 {
+    display: block !important;
+    width: 100%;
+    max-width: 100% !important;
+    height: 150px !important;
+    max-height: 100% !important;
+}
+
+
+ion-view[state="commercepro-category-list"] .item.item-cards.p-0.animate__animated.animate__fadeInUp .row.p-0 .col-30 .store-img {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover !important;
+    vertical-align: middle;
+    margin: auto;
+    height: 150px;
+    width: 100%;
+}
+
+
+ion-view[state="commercepro-category-list"] .item.item-cards.p-0.animate__animated.animate__fadeInUp .row.p-0 .col-70.col-center {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+ion-view[state="commercepro-category-list"] .item.item-cards.p-0.animate__animated.animate__fadeInUp .row.p-0 .col-70.col-center .col-80 .row.p-0 .col-10.icon-location {
+    display: none;
+}
+
+ion-view[state="commercepro-category-list"] .col-80 h2.m-0 b.ng-binding {
+    font-size: 18px;
+    margin: 10px 0;
+    display: block;
+}
+
+ion-view[state="commercepro-category-list"] .list .item.item-custom {
+    border: 0;
+    background-color: transparent !important;
+    color: #000 !important;
+    padding: 5px;
+}
+
+
+ion-view[state="commercepro-category-list"] ion-item.item-custom.item .list.p-0.m-0.mb-40 .card.stor-list {
+    box-shadow: none;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 30px;
+}
+
+
+ion-view[state="commercepro-category-list"] .item.item-cards.p-0.animate__animated.animate__fadeInUp {
+    box-shadow: none !important;
+    background-image: none !important;
+    border: 0 !important;
+    background-color: transparent;
+    border-radius: 30px !important;
+}
+
+
+ion-view[state="commercepro-category-list"] .col-90 p.m-0.ng-binding {
+    white-space: normal;
+    border: 0;
+    color: #d5b026 !important;
+    margin-top: 10px !important;
+}
+
+ion-view[state="commercepro-category-list"] .col-90 p.m-0.ng-binding:after {
+    content: "View Store";
+    display: block;
+    margin: 10px 0;
+    background-color: #d5b026;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+
+
+ion-view[state="commercepro-category-list"] .col-20.col-center .col.p-0.col-top img.icon-right.mb-10 {
+    display: none;
+}
+
+
+ion-view[state="commercepro-category-list"] .col.p-0.col-bottom p.bold.ng-binding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: #d5b026 !important;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+/* cart & history */
+div[ng-if="is_cart_enable && use_button_header"].bar-custom.bar {
+    display: inline-block;
+    height: 150px;
+    background-color: transparent !important;
+    width: 30% !important;
+}
+
+div[ng-if="is_cart_enable && use_button_header"].bar-custom.bar>div>a {
+    height: 60px !important;
+    max-width: 80px !important;
+    background-color: #d5b026 !important;
+    border-radius: 50px;
+    font-size: 0;
+    width: 60px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+div[ng-if="is_cart_enable && use_button_header"].bar-custom.bar>div>a.button.icon-left.ion-clipboard.ng-binding {
+    background-image: url(https://ensiklopediakesaguan.com/wp-content/uploads/2021/04/history.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+}
+
+div[ng-if="is_cart_enable && use_button_header"].bar-custom.bar>div>a.button.icon-left.ion-ios-cart {
+    background-image: url(https://ensiklopediakesaguan.com/wp-content/uploads/2021/04/bag_it-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+}
+
+div[ng-if="is_cart_enable && use_button_header"].bar-custom.bar>div>a.ion-clipboard:before,
+div[ng-if="is_cart_enable && use_button_header"].bar-custom.bar>div>a.ion-ios-cart:before {
+    display: none;  
+}
+
+div[ng-if="is_cart_enable && use_button_header"].bar-custom.bar a.button.icon-left.ion-ios-cart .badge.badge-positive-custom {
+    background-color: #fff !important;
+    color: #d5b026 !important;
+}
+
+div[ng-if="is_cart_enable && use_button_header"].bar-custom.bar>div {
+    display: flex;
+    float: none !important;
+    margin: 10px auto !important;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+/* Store Page */
+ion-view[state="commercepro-store-product-list"] {
+    background-image: none !important;
+}
+
+ion-view[state="commercepro-store-product-list"] ion-content {
+    background-color: #ffffff !important;
+    padding-top: 25px !important;
+    margin-top: -40px !important;
+}
+
+ion-view[state="commercepro-store-product-list"] ion-content .card.store-card.item-custom.item .row {
+    padding: 0;
+}
+
+
+ion-view[state="commercepro-store-product-list"] ion-content .rectangle-card {
+    display: block;
+    width: 100%;
+    background-color: #d5b026 !important;
+    position: relative;
+    margin-top: 80px;
+    box-shadow: none;
+    margin-bottom: 10px !important;
+    border-radius: 5px;
+}
+
+ion-view[state="commercepro-store-product-list"] ion-content .row .rectangle-card .circle-store {
+    width: 90% !important;
+    border-radius: 10px;
+    border: 0;
+    margin: 10px 5% !important;
+    left: 0 !important;
+    display: block !important;
+    height: 150px !important;
+    box-shadow: none;
+    top: -85px;
+}
+
+
+ion-view[state="commercepro-store-product-list"] ion-content .row .rectangle-card .circle-store span.store-cover {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    vertical-align: middle;
+    margin: auto;
+    height: 150px;
+    width: 100%;
+}
+
+ion-view[state="commercepro-store-product-list"] ion-content .col.store-details {
+    background-color: transparent !important;
+    margin-top: 90px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: -15px;
+}
+
+
+ion-view[state="commercepro-store-product-list"] .pro-categories .left.active .category-image,
+ion-view[state="commercepro-store-product-list"] .pro-categories .left .category-image {
+    display: none;
+}
+
+ion-view[state="commercepro-store-product-list"] ion-content .left.active .category-label span {
+    background-color: #d5b026;
+    padding: 5px 20px;
+    border-radius: 50px;
+    color: #fff;
+    border: 0;
+    text-align: right;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+ion-view[state="commercepro-store-product-list"] ion-content .left .category-label span {
+    font-size: 12px;
+}
+
+ion-view[state="commercepro-store-product-list"] ion-content .list.store-category.m-0,
+ion-view[state="commercepro-store-product-list"] ion-content .list.store-category.m-0 .item.item-custom {
+    background-color: transparent !important;
+}
+
+
+ion-view[state="commercepro-store-product-list"] ion-content .list.store-category.m-0 .item.item-custom>h2>b,
+ion-view[state="commercepro-store-product-list"] ion-content .row.p-0.text-center .col i.icon.ion-information-circled,
+ion-view[state="commercepro-store-product-list"] ion-content .row.p-0.text-center .col.p-0 .row.p-0 .col.p-0 .icon-location.icon-cus img {
+    display: none;
+}
+
+ion-view[state="commercepro-store-product-list"] ion-content .col.store-details p[ng-bind-html="cover.subtitle"] {
+    font-size: 18px;
+    color: #d5b026 !important;
+    font-weight: bold;
+    margin-bottom: 0 !important;
+}
+
+ion-view[state="commercepro-store-product-list"] ion-content .row.p-0 .col.p-0 p.d-inline.ng-binding {
+    display: block;
+    font-size: 14px !important;
+    white-space: normal;
+    margin-bottom: 10px;
+}
+
+ion-view[state="commercepro-store-product-list"] ion-content span[ng-if="labels.disable_location !== '1' && (location.latitude || location.longitude)"] {
+    display: none;
+}
+
+ion-view[state="commercepro-store-product-list"] ion-content [ng-show="!labels.chat_text"],
+ion-view[state="commercepro-store-product-list"] ion-content i.icon.ion-sb-comment.post-action-icon,
+ion-view[state="commercepro-store-product-list"] ion-content .icon-location.icon-cus {
+    display: none;
+}
+
+ion-view[state="commercepro-store-product-list"] ion-content [ng-show="is_chat_enable"] [ng-show="labels.chat_text"],
+ion-view[state="commercepro-store-product-list"] ion-content .col.p-0 .col.p-0 p.d-inline a.ng-binding {
+    font-size: 14px !important;
+    text-decoration: none;
+    margin: 10px;
+    display: block;
+    color: #ffffff !important;
+}
+
+ion-view[state="commercepro-store-product-list"] span[ng-show="labels.chat_text"].ng-binding {
+    margin-top: -20px !important;
+}
+
+
+/* cart & history */
+ion-view[state="commercepro-store-product-list"] .bar-custom.bar {
+    display: inline-block;
+    height: 150px;
+    background-color: transparent !important;
+    width: 30% !important;
+}
+
+ion-view[state="commercepro-store-product-list"] .bar-custom.bar>div>a {
+    height: 60px !important;
+    max-width: 80px !important;
+    background-color: #d5b026 !important;
+    border-radius: 50px;
+    font-size: 0;
+    width: 60px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-view[state="commercepro-store-product-list"] .bar-custom.bar>div>a.button.icon-left.ion-clipboard.ng-binding {
+    background-image: url(https://ensiklopediakesaguan.com/wp-content/uploads/2021/04/history.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+}
+
+ion-view[state="commercepro-store-product-list"] .bar-custom.bar>div>a.button.icon-left.ion-ios-cart {
+    background-image: url(https://ensiklopediakesaguan.com/wp-content/uploads/2021/04/bag_it-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+}
+
+ion-view[state="commercepro-store-product-list"] .bar-custom.bar>div>a.ion-clipboard:before,
+ion-view[state="commercepro-store-product-list"] .bar-custom.bar>div>a.ion-ios-cart:before {
+    display: none;  
+}
+
+ion-view[state="commercepro-store-product-list"] .bar-custom.bar a.button.icon-left.ion-ios-cart .badge.badge-positive-custom {
+    background-color: #fff !important;
+    color: #000000 !important;
+}
+
+ion-view[state="commercepro-store-product-list"] .bar-custom.bar>div {
+    display: flex;
+    float: none !important;
+    margin: 10px auto !important;
+    justify-content: center;
+    align-items: center;
+}
+
+
+ion-view[state="commercepro-store-product-list"] .row .col.col-10.text-center.col-center a {
+    font-size: 30px;
+}
+
+ion-view[state="commercepro-store-product-list"] .col.col-90.text-center.col-center label.item.item-input.p-0.pl-10.brd-rad-50 {
+    border-radius: 10px !important;
+    border: 0 !important;
+    background-color: transparent;
+}
+
+ion-view[state="commercepro-store-product-list"] .list.store-category.m-0 {
+    height: 50px;
+}
+
+ion-view[state="commercepro-store-product-list"] .item1.item-custom1 .row .col.col-50 .col.product-head {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+ion-view[state="commercepro-store-product-list"] .col.col-90.text-center.col-center label.item.item-input.p-0.pl-10.brd-rad-50 input {
+    padding: 10px;
+}
+
+ion-view[state="commercepro-store-product-list"] .item1.item-custom1 .row {
+    padding: 0;
+    margin: 10px 0;
+}
+
+
+ion-view[state="commercepro-store-product-list"] .item1.item-custom1 .row .col.col-50 {
+    background-color: #d5b026;
+    border-radius: 30px  !important;
+    padding: 10px;
+    margin: 10px 2%;
+    max-width: 46%;
+    flex: 0 0 46%;
+}
+
+ion-view[state="commercepro-store-product-list"] .item1.item-custom1 .row .col.col-50 .col.product-head {
+    padding: 10px;
+}
+
+
+ion-view[state="commercepro-store-product-list"] .item1.item-custom1 .row .col.col-50 .col.product-head .product-img {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    vertical-align: middle;
+    margin: 0;
+    width: 100%;
+    background-color: transparent;
+    height: 150px !important;
+    padding: 0 !important;
+    border-radius: 25px;
+}
+
+ion-view[state="commercepro-product-view"] .card .item-divider.item-divider-custom {
+    background-color: transparent;
+    color: #000;
+    border: 0;
+}
+
+ion-view[state="commercepro-store-product-list"] .col.product-body.item {
+    height: auto !important;
+    background-color: transparent !important;
+}
+
+
+
+ion-view[state="commercepro-store-product-list"] .col.product-body.item {
+    border: 0;
+    padding: 0;
+}
+
+ion-view[state="commercepro-store-product-list"] .col.product-body.item .row.p-0 {
+    margin: 0 !important;
+}
+
+ion-view[state="commercepro-store-product-list"] .col.product-body.item>.row.p-0>.col.p-0>p {
+    font-size: 16px;
+    text-align: center;
+}
+
+ion-view[state="commercepro-store-product-list"] .col.p-0 .folder-title.prod-desc.ng-binding {
+    display: none;
+}
+
+ion-view[state="commercepro-store-product-list"] .col.col-90.product-title span[ng-show="labels.product_text"] {
+    display: none;
+}
+
+/*
+.col.col-50.p-0.text-left.col-center span.bold.ng-binding:after {
+    display: block;
+    content: "Details";
+    font-size: 12px;
+    font-weight: normal;
+    background-color: #ffffff;
+    padding: 5px 0;
+    margin: 15px 0 0 0;
+    border-radius: 10px;
+} */
+
+
+ion-view[state="commercepro-store-product-list"] button.button.button-small.btn-add.ng-binding {
+    width: 96%;
+    left: 0;
+    margin: 0 !important;
+    display: block;
+    background-color: transparent !important;
+}
+
+
+ion-view[state="commercepro-store-product-list"] [ng-if="!price_hide_flag"] {
+    display: inline-block;
+    width: 100%;
+}
+
+ion-view[state="commercepro-store-product-list"] [ng-if="!price_hide_flag"] .col.col-50.p-0.text-left.col-center {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+ion-view[state="commercepro-store-product-list"] [ng-if="!price_hide_flag"] .col.col-50.p-0.text-right.col-center {
+    display: block;
+    width: 96%;
+    max-width: 96%;
+    text-align: center;
+    background-color: #d5b026 !important;
+    margin: 0 !important;
+    padding: 5px !important;
+    border-radius: 30px !important;
+    border: 2px solid #fff;
+}
+
+ion-view[state="commercepro-store-product-list"] .col.product-body.item {
+    height: auto !important;
+}
+
+/*
+[ng-if="!price_hide_flag"] .col.col-50.p-0.text-right.col-center {
+    display: block;
+    max-width: 100%;
+    text-align: center;
+    background-image: url(https://ensiklopediakesaguan.com/wp-content/uploads/2021/04/order-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    border-radius: 50px !important;
+    width: 40%;
+    height: 50px;
+    margin: 0 30% !important;
+    background-color: #ecf0f6;
+}
+*/
+
+
+/* PRODUCT VIEW */
+[state="commercepro-product-view"] {
+    background-image: none !important;
+}
+
+[state="commercepro-product-view"] ion-content {
+    background-color: #ffffff !important;
+    margin-top: -20px;
+}
+
+[state="commercepro-product-view"] ion-content>.scroll:first-child,
+[state="commercepro-product-view"] ion-content>.scroll:first-child [ng-if="product.picture.length && !is_product_pic_hide"] {
+    box-shadow: none !important;
+    background-color: transparent;
+    margin: 0;
+    border: 0 !important;
+}
+
+[state="commercepro-product-view"] ion-content .scroll .card {
+    box-shadow: none !important;
+    margin: 0 !important;
+}
+
+
+[state="commercepro-product-view"] ion-content .scroll .card:nth-child(1) .item.item-custom {
+    background-color: transparent;
+    border: 0;
+}
+
+[state="commercepro-product-view"] ion-content .card:first-child(1)>.item.item-custom {
+    border: 0;
+    background-color: transparent !important;
+    color: #ffffff;
+}
+
+[state="commercepro-product-view"] .card>.item.item-text-wrap.text-center.item-custom {
+    display: none;
+}
+
+[state="commercepro-product-view"] .slider-pager {
+    text-align: left;
+}
+
+[state="commercepro-product-view"] .slider-pager span.slider-pager-page {
+    background-color: #000000 !important;
+    width: 15px;
+    height: 10px;
+    border-radius: 10px;
+}
+
+[state="commercepro-product-view"] .slider-pager span.slider-pager-page.active {
+    background-color: #d5b026 !important;
+    width: 30px;
+    height: 10px;
+    border-radius: 10px;
+}
+
+[state="commercepro-product-view"] ion-content .scroll .card .card .item-divider.item-divider-custom {
+    background-color: transparent;
+    color: #000;
+    border: 0;
+}
+
+ion-view.mcommerce-view.mcommerce-product.module-commercepro .rating-sec .rat-body {
+    background-color: transparent;
+    border: 0;
+    padding: 0px 2px 0px 6px;
+    display: block;
+    height: 35px;
+    color: #000 !important;
+}
+
+ion-view.mcommerce-view.mcommerce-product.module-commercepro .rating-sec .rat-body span.rat-num.ng-binding {
+    color: #000;
+    font-size: 18px;
+}
+
+
+ion-view.mcommerce-view.mcommerce-product.module-commercepro .rat-num p {
+    font-size: 16px;
+    margin: 0px 7px !important;
+}
+
+ion-view.mcommerce-view.mcommerce-product.module-commercepro .rat-num p i.icon.ion-person {
+    margin: 0 5px;
+}
+
+
+[state="commercepro-product-view"] span.slider-pager-page.active i.icon.ion-record,
+[state="commercepro-product-view"] span.slider-pager-page i.icon.ion-record {
+    font-size: 0;
+}
+
+
+[state="commercepro-product-view"] .item.item-input.item-custom.input-number-sb.ng-not-empty.ng-valid>div.input-label.ng-binding {
+    display: none !important;
+}
+
+[state="commercepro-product-view"] .item.item-input.item-custom.input-number-sb.ng-not-empty.ng-valid {
+    display: inline-flex;
+    width: 45%;
+    height: 65px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    float: left;
+    background-color: transparent;
+}
+
+[state="commercepro-product-view"] .item.item-input.item-custom.input-number-sb.ng-not-empty.ng-valid .input-container.text-right {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    line-height: 60;
+}
+
+[state="commercepro-product-view"] button.button.button-small.button-custom.button-left,
+[state="commercepro-product-view"] button.button.button-small.button-custom.button-right {
+    background-color: #d5b026;
+    height: 30px !important;
+    width: 40px !important;
+    border-radius: 50px;
+    color: #ffffff;
+}
+
+[state="commercepro-product-view"] button.button.button-small.button-custom.button-left.activated,
+[state="commercepro-product-view"] button.button.button-small.button-custom.button-right.activated {
+    border: 0;
+    background-color: #d5b026;
+    color: #fff;
+    
+}
+
+
+[state="commercepro-product-view"] .item-input-wrapper {
+    border-radius: 0;
+    max-width: 50px;
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px !important;
+    color: #d5b026;
+    font-weight: bold !important;
+}
+
+[state="commercepro-product-view"] .item-input-wrapper input {
+    font-size: 28px !important;
+    color: #d5b026 !important;
+    font-weight: bold !important;
+}
+
+
+[state="commercepro-product-view"] .item.item-custom div#homepage_slider .slider-slides ion-slide.slider-slide img {
+    width: 80% !important;
+    margin-left: 10%;
+    border-radius: 30px !important;
+}
+
+
+[state="commercepro-product-view"] .card[ng-if="!price_hide_flag"] {
+    padding-top: 160px;
+    background-color: transparent;
+    border-radius: 30px 30px 0 0;
+    box-shadow: none !important;
+    margin: -166px 0 0 0 !important;
+    padding-bottom: 5px;
+}
+
+[state="commercepro-product-view"] .card[ng-if="!price_hide_flag"] .item.item-body.item-custom {
+    text-align: center;
+    font-size: 18px;
+    color: #d5b026;
+    font-weight: bold;
+}
+
+[state="commercepro-product-view"] .card[ng-if="is_cart_enable"] {
+    margin: -10px 0 0 0 !important;
+    border: 0;
+    box-shadow: none;
+    background-color: #fff !important;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+[state="commercepro-product-view"] div[ng-click="addProduct()"].item.item-custom {
+    border: 0 !important;
+    background-color: #d5b026 !important;
+    color: #fff !important;
+    width: 30%;
+    border-radius: 30px;
+    background-image: none;
+    font-size: 15px !important;
+    display: flex;
+    float: revert;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+[state="commercepro-product-view"] i.icon.ion-ios-cart-outline {
+    color: white !important;
+
+}
+
+
+[state="commercepro-product-view"] .card:nth-child(5) {
+    margin: 0 !important;
+    padding: 0;
+    box-shadow: none;
+    background-color: #fff;
+    padding-top: 20px;
+    border-radius: 0 0 30px 30px !important;
+}
+
+[state="commercepro-product-view"] .card:nth-child(5) .item.item-body.item-custom.ng-binding {
+    padding-bottom: 40px;
+}
+
+[state="commercepro-product-view"] div[ng-if="is_chat_enable"].card {
+    padding-bottom: 50px;
+}
+
+[state="commercepro-product-view"] [ng-if="is_chat_enable"]>.item.item-divider.item-divider-custom {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://ensiklopediakesaguan.com/wp-content/uploads/2021/03/whatsapp.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+
+[state="commercepro-product-view"] [ng-if="is_chat_enable"] .button.button-positive-custom {
+    border: 0;
+    background-color: transparent;
+    color: transparent;
+    font-size: 0;
+}
+
+
+
+/* Cart Page */
+ion-view[state="commercepro-cart-view"] {
+    background-image: none !important;
+}
+
+ion-view[state="commercepro-cart-view"] ion-content {
+    background-color: #ffffff !important;
+}
+
+ion-view[state="commercepro-cart-view"] ion-content .card {
+    border-radius: 30px;
+    padding: 20px 0;
+    background-color: #d5b026;
+    box-shadow: none !important;
+}
+
+ion-view[state="commercepro-cart-view"] button.button.button-small.button-custom.button-left,
+ion-view[state="commercepro-cart-view"] button.button.button-small.button-custom.button-right {
+    background-color: #d5b026;
+    height: 30px !important;
+    width: 30px !important;
+    border-radius: 50px;
+    color: #fff;
+}
+
+ion-view[state="commercepro-cart-view"] button.button.button-small.button-custom.button-left.activated,
+ion-view[state="commercepro-cart-view"] button.button.button-small.button-custom.button-right.activated {
+    border: 0;
+    background-color: #ffffff;
+    color: #000;    
+}
+
+
+
+ion-view[state="commercepro-cart-view"] i.icon.ion-clipboard {
+    display: none;
+}
+
+ion-view[state="commercepro-cart-view"] .item.item-thumbnail-left.item-icon-right.item-custom img {
+    border-radius: 30px;
+}
+
+
+ion-view[state="commercepro-cart-view"] i.icon.ion-trash-a {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d5b026;
+}
+
+ion-view[state="commercepro-cart-view"] div[ng-if="object.cart.lines.length && !object.cart.commerce_pro.price_hide_flag"] {
+    display: flex;
+    flex-direction: column;
+}
+
+ion-view[state="commercepro-cart-view"] div[ng-if="object.cart.lines.length && !object.cart.commerce_pro.price_hide_flag"]>.item.item-divider.item-divider-custom strong {
+    font-size: 16px !important;
+}
+
+ion-view[state="commercepro-cart-view"] i.icon.ion-calculator {
+    display: none !important;
+}
+
+ion-view[state="commercepro-cart-view"] div[ng-if="object.cart.lines.length && !object.cart.commerce_pro.price_hide_flag"] .item.item-custom:nth-child(2) {
+    order: 2;
+}
+
+ion-view[state="commercepro-cart-view"] div[ng-if="object.cart.lines.length && !object.cart.commerce_pro.price_hide_flag"] .item.item-custom span.item-note.ng-binding,
+ion-view[state="commercepro-cart-view"] div[ng-if="object.cart.lines.length && !object.cart.commerce_pro.price_hide_flag"] .item.item-custom span.item-note strong.ng-binding {
+    font-size: 16px;
+    color: #d5b026;
+}
+
+.item.item-thumbnail-left.item-icon-right.item-custom p.text-right.tax-true.ng-binding {
+    text-align: left;
+}
+
+ion-view[state="commercepro-cart-view"] ion-content .card:last-child {
+    padding-bottom: 80px !important;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-view[state="commercepro-cart-view"] ion-content .card:last-child [ng-click="goToCategories()"] {
+    border-radius: 30px !important;
+    width: 80%;
+    text-align: center;
+}
+
+
+ion-view[state="commercepro-cart-view"] ion-content .card:nth-last-child(2) {
+    background-color: transparent !important;
+}
+
+ion-view[state="commercepro-cart-view"] ion-content .card:nth-last-child(2) .item.item-divider.item-divider-custom p {
+    color: #000;
+    font-size: 18px;
+}
+ion-view[state="commercepro-cart-view"] ion-content .card:nth-last-child(2) .item.item-divider.item-divider-custom {
+    background: transparent;
+    color: #000 !important;
+}
+
+ion-view[state="commercepro-cart-view"] ion-content .card:nth-last-child(2) .item.item-custom {
+    background-color: transparent;
+    color: #000;
+    font-weight: normal !important;
+    border: 0 !important;
+}
+
+
+ion-view[state="commercepro-cart-view"] ion-content .card:nth-last-child(2) .item.item-custom span,
+ion-view[state="commercepro-cart-view"] ion-content .card:nth-last-child(2) .item.item-custom span strong {
+    font-size: 16px;
+    color: #000 !important;
+    font-weight: bold;
+}
+
+
+/* CHOOSE STORE PAGE */
+ion-view.mcommerce-view.mcommerce-sales-store {
+    background-image: none !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-store ion-content {
+    background-color: #fff !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-store .list .item-divider.item-divider-custom {
+    background-color: transparent;
+    color: #6b6b6b;
+    border: rgba(247, 247, 247, 0);
+}
+
+ion-view.mcommerce-view.mcommerce-sales-store ion-item.item-divider.item-divider-custom.item h2.ng-binding {
+    font-size: 28px;
+    color: #d5b026;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-store .item-radio.radio-custom {
+    color: #fff;
+    background-color: transparent;
+    border: 0 !important;
+    margin: 10px 0 !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-store .radio-content {
+    border-radius: 10px !important;
+    border: 0 !important;
+    background: #d5b026 !important;
+    padding: 10px;
+    width: 96%;
+    margin-left: 2%;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-store .item-content.disable-pointer-events {
+    background: transparent !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-store i.radio-icon.disable-pointer-events.icon.ion-checkmark {
+    color: #fff;
+    margin-right: 20px;
+}
+
+
+
+/* MY INFORMATION */
+ion-view.mcommerce-view.mcommerce-sales-customer {
+    background-image: none !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-customer ion-content {
+    background-color: #ffffff !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-customer .list .item-divider.item-divider-custom {
+    background-color: transparent;
+    color: #6b6b6b;
+    border: rgba(247, 247, 247, 0);
+}
+
+ion-view.mcommerce-view.mcommerce-sales-customer ion-item.item-divider.item-divider-custom.item h2.ng-binding {
+    font-size: 28px;
+    color: #d5b026;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+
+ion-view.mcommerce-view.mcommerce-sales-customer .list .item.item-custom {
+    border: 0;
+    color: #6b6b6b;
+    background-color: transparent;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-customer .list .item.item-custom .input-label.ng-binding {
+    display: block;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-customer .list .item.item-custom input {
+    text-align: left !important;
+    border-bottom: 2px solid #d5b026 !important;
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+
+
+/* Delivey option */
+ion-view.mcommerce-view.mcommerce-sales-error {
+    background-image: none !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-error ion-content {
+    background-color: #ffffff !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-error .list .item-divider.item-divider-custom {
+    background-color: transparent;
+    color: #000000;
+    border: rgba(247, 247, 247, 0);
+}
+
+ion-view.mcommerce-view.mcommerce-sales-error ion-item.item-divider.item-divider-custom.item h2.ng-binding {
+    font-size: 28px;
+    color: #d5b026;
+    margin: 10px 0;
+    font-weight: bold;
+    white-space: normal;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-error .item-radio.radio-custom {
+    color: #fff;
+    background-color: transparent;
+    border: 0 !important;
+    margin: 10px 0 !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-error .radio-content {
+    border-radius: 10px !important;
+    border: 0 !important;
+    background: #d5b026 !important;
+    padding: 10px;
+    width: 96%;
+    margin-left: 2%;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-error .item-content.disable-pointer-events {
+    background: transparent !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-error i.radio-icon.disable-pointer-events.icon.ion-checkmark {
+    color: #fff;
+    margin-right: 20px;
+}
+
+
+ion-view.mcommerce-view.mcommerce-sales-error label.item.item-input.item-custom.datetime-picker-com-input {
+    border-radius: 10px;
+    width: 96%;
+    margin-left: 2%;
+    display: inline-block;
+    text-align: left;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-error .input-label.ng-binding {
+    width: 100% !important;
+    display: block !important;
+    max-width: 100%;
+    
+}
+
+div[ng-if="clients_calculate_change_form_is_visible"] ion-item {
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-error div[ng-if="clients_calculate_change_form_is_visible"] ion-item .row {
+    text-align: left;
+}
+
+
+
+ion-view.mcommerce-view.mcommerce-sales-error input {
+    font-size: 18px !important;
+    color: #d5b026 !important;
+    font-weight: bold;
+}
+
+
+ion-view.mcommerce-view.mcommerce-sales-error .row .col-35.text-right>input {
+    text-align: right !important;
+    font-size: 15px !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-error label[model="cart.submitted_number"] {
+    width: 96%;
+    margin-left: 2%;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: left !important;
+    border-bottom: 2px solid #fff !important;
+}
+
+
+/* Payment Page */
+ion-view.mcommerce-view.mcommerce-sales-payment {
+    background-image: none !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-payment ion-content {
+    background-color: #ffffff !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-payment .list .item-divider.item-divider-custom {
+    background-color: transparent;
+    color: #6b6b6b;
+    border: rgba(247, 247, 247, 0);
+}
+
+ion-view.mcommerce-view.mcommerce-sales-payment ion-item.item-divider.item-divider-custom.item h2.ng-binding {
+    font-size: 28px;
+    color: #d5b026;
+    margin: 10px 0;
+    font-weight: bold;
+    white-space: normal;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-payment .item-radio.radio-custom {
+    color: #ffffff;
+    background-color: transparent;
+    border: 0 !important;
+    margin: 10px 0 !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-payment .radio-content {
+    border-radius: 10px !important;
+    border: 0 !important;
+    background: #d5b026 !important;
+    padding: 10px;
+    width: 96%;
+    margin-left: 2%;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-payment .item-content.disable-pointer-events {
+    background: transparent !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-payment i.radio-icon.disable-pointer-events.icon.ion-checkmark {
+    color: #ffffff;
+    margin-right: 20px;
+}
+
+
+ion-view.mcommerce-view.mcommerce-sales-payment .item-content.disable-pointer-events span.ng-binding {
+    white-space: normal;
+}
+
+
+/* Review Page */
+ion-view.mcommerce-view.mcommerce-sales-confirmation {
+    background-image: none !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content {
+    background-color: #ffffff !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card {
+    border-radius: 30px;
+    box-shadow: none;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card .item.item-divider.item-divider-custom i {
+    display: none;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card .item.item-divider.item-divider-custom p {
+    font-size: 16px;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card .item.item-divider.item-divider-custom {
+    background-color: transparent;
+    padding: 0;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card .item.item-thumbnail-left.item-icon-right.item-custom p {
+    text-align: left;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card .item.item-thumbnail-left.item-icon-right.item-custom {
+    background-color: transparent;
+    border: 0;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card .item.item-custom.ng-binding {
+    background-color: transparent;
+    border: 0;
+}
+
+
+/* Thank You Page */
+ion-view.mcommerce-view.mcommerce-sales-success {
+  background-image: none !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-success ion-content {
+    background-color: #fff !important;
+}
+
+
+/* Customers History */
+ion-view.mcommerce-view.mcommerce-sales-history {
+  background-image: none !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-history ion-content {
+    background-color: #ebeaef !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-history ion-content input[type="text"] {
+    width: 96% !important;
+    margin: 10px 2%;
+    padding: 10px;
+    border-radius: 30px;
+    height: 40px;
+    border: 0 !important;
+    background-color: #fff;
+    background-image: url(https://ensiklopediakesaguan.com/wp-content/uploads/2021/04/search-outline.svg);
+    background-position: center right 10px;
+    background-repeat: no-repeat;
+    background-size: 24px;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-history ion-content .list {
+    background-color: transparent;
+}
+
+
+ion-view.mcommerce-view.mcommerce-sales-history ion-content .list .item.item-custom {
+    border: 0;
+    background-color: #fff;
+    color: #6b6b6b;
+    width: 96%;
+    margin: 10px 2%;
+    border-radius: 30px;
+    padding: 10px 10px;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-history ion-content .item.item-text-wrap.item-custom h2,
+ion-view.mcommerce-view.mcommerce-sales-history ion-content .item.item-text-wrap.item-custom p {
+    text-align: left;
+    margin-top: 10px;
+}
+
+
+ion-view.mcommerce-view.mcommerce-sales-history ion-content .item.item-custom.item-icon-left {
+    text-align: left !important;
+    padding: 0;
+    margin: 0 !important;
+}
+
+
+ion-view.mcommerce-view.mcommerce-sales-history ion-content:before {
+    content: "Your order history goes here";
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 10px !important;
+    display: block;
+    color: #d5b026;
+    background-image: url(https://ensiklopediakesaguan.com/wp-content/uploads/2021/04/undraw_order_delivered_p6ba.svg);
+    background-position: center right 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 150px;
+    padding-right: 40%;
+    line-height: 1.5;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-history ion-content .item.item-text-wrap.item-custom h2:before {
+    content: "Detail";
+    display: block;
+    margin: 10px 0;
+    background-color: #d5b026;
+    width: 40%;
+    margin-left: 60%;
+    padding: 8px 0;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-history ion-content .item.item-text-wrap.item-custom h2:before {
+    content: "Detail";
+    display: block;
+    margin: 10px 0;
+    background-color: #d5b026;
+    width: 40%;
+    margin-left: 60%;
+    padding: 8px 0;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+
+
+/* Sales History Details */
+ion-view.mcommerce-view.mcommerce-sales-history-details {
+  background-image: none !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-history ion-content {
+    background-color: #ebeaef !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-history .list * {
+    text-align: left;
+}
+
+
+ion-view.mcommerce-view.mcommerce-sales-history .list .item.item-custom {
+    border: 0;
+    background-color: transparent;
+    color: #6b6b6b;
+    text-align: left;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-history .item.item-divider.item-divider-custom.item-custom h2 {
+    color: #d5b026;
+    margin-top: 30px;
+}
+
+
+ion-view.mcommerce-view.mcommerce-sales-history .button.button-positive-custom {
+    border: 0;
+    background-color: #d5b026;
+    color: #fff;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 30px;
+}
+
+
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card:nth-last-child(3) {
+    background-color: transparent;
+    padding: 10px 0;
+    border-radius: 0 !important;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card:nth-last-child(3) .item.item-custom {
+    background-color: transparent;
+    padding: 10px 0;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card:nth-last-child(3) .row .col-75.text-right.ng-binding {
+    text-align: left;
+    font-weight: bold;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card:nth-last-child(3) .item.item-custom span>strong.ng-binding {
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card:nth-last-child(3) .item.item-custom.ng-binding span.item-note.ng-binding {
+    font-size: 16px;
+    color: #000;
+}
+
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card:nth-last-child(3) .row .col-25.text-right.ng-binding {
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    white-space: normal !important;
+    margin-right: 10px !important;
+    width: 80% !important;
+    max-width: 80% !important;
+    display: inline-block;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card:nth-last-child(2) {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card:nth-last-child(1) {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card:nth-last-child(1) .item {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    padding-bottom: 50px;
+}
+
+ion-view.mcommerce-view.mcommerce-sales-confirmation ion-content .card:nth-last-child(1) textarea#notes {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #ecf0f6;
+    padding-bottom: 30px;
+    line-height: 1.5;
+}
+
+
+ion-view.mcommerce-view.mcommerce-product.module-commercepro .item.item-body.item-custom.ng-binding p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+ion-view.mcommerce-view.mcommerce-product.module-commercepro .card .item.item-custom {
+    border: 0;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 1);
+    font-size: 14px !important;
+    margin: 20px 0;
+}
+
+ion-view.mcommerce-view.mcommerce-product.module-commercepro h2.ng-binding {
+    font-size: 19px !important;
+    color: #000 !important;
+    margin-top: 15px;
+}
+
+ion-view.mcommerce-view.mcommerce-product.module-commercepro .card .item.item-custom h1 {
+    font-size: 23px !important;
+}
+
+
+
+
+
+
+/* POPUP */
+.popup-container.active .popup {
+    border-radius: 30px !important;
+    box-shadow: none !important;
+}
+
+.platform-browser .popup-buttons,
+.platform-overview .popup-buttons,
+.platform-ios .popup-buttons,
+.platform-android .popup-buttons {
+    text-align: center !important;
+    background-color: transparent !important;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    width: 100% !important;
+    margin: 10px 0 !important;
+    display: inline-block !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+}
+
+.platform-browser .popup .popup-head,
+.platform-overview .popup .popup-head,
+.platform-ios .popup .popup-head,
+.platform-android .popup .popup-head {
+    padding: 20px 20px 0;
+    border-bottom: 0;
+    text-align: center !important;
+    font-size: 22px;
+    font-weight: bold !important;
+}
+
+h3.popup-title.ng-binding:before {
+    content: " ";
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    color: #d5b026;
+    background-image: url(https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-check-multimedia-kiranshastry-gradient-kiranshastry.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.platform-browser .popup button.button:first-of-type,
+.platform-overview .popup button.button:first-of-type,
+.platform-ios .popup button.button:first-of-type,
+.platform-android .popup button.button:first-of-type {
+    width: 60% !important;
+    text-align: center !important;
+    border-radius: 30px !important;
+    background-color: #d5b026 !important;
+    padding: 10px !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    margin: 10px 0 !important;
+    display: block !important;
+    margin-left: 20% !important;
+}
+
+.platform-browser .popup button.button,
+.platform-overview .popup button.button,
+.platform-ios .popup button.button,
+.platform-android .popup button.button {
+    display: block !important;
+    background-color: #d5b026 !important;
+    width: 60% !important;
+    text-align: center !important;
+    padding: 10px !important;
+    border-radius: 30px !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    margin-left: 20% !important;
+}
+
+.platform-browser .popup .popup-body,
+.platform-overview .popup .popup-body,
+.platform-ios .popup .popup-body,
+.platform-android .popup .popup-body {
+    padding: 20px 20px;
+    border-bottom: 0;
+    text-align: center !important;
+}
+/***** START: My Account CSS *****/
+
+/* Start: Variables - You can customize here color codes & Image URL*/
+
+$myaccount-bg-img-url: "https://cnmarketing.co.za/wp-content/uploads/2021/10/Accounts1.jpg";
+$myaccount-button-bg-color: #d5b026;
+$myaccount-links-color: #d5b026;
+$myaccount-title-bg-color: #d5b026;
+$myaccount-forgot-pass-link-color: #d5b026;
+$myaccount-text-color: #FFFFFF;
+$myaccount-opacity: rgba(255, 255, 255, 0.4);
+$myaccount-list-items-opacity: rgba(244, 216, 117, 0.9);
+$myaccount-links-opacity: rgba(255, 255, 255, 0.6);
+
+/* End: Variables */
+
+/* My Account Background Image */
+.customer-view { 
+  background-image: url($myaccount-bg-img-url) !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* My Account Title Bar */
+.customer-view .bar.bar-custom {
+  background: $myaccount-title-bg-color;
+}
+
+/* Adjust Margin & Padding */
+.customer-view .list {
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+.customer-view .padding { padding: 5px; }
+
+/* List Items */
+.customer-view .list .item.item-custom {
+  margin: 7px; 
+  border-radius: 20px; 
+  border-color: transparent !important;
+  background-color: $myaccount-list-items-opacity;
+}
+
+/* Button */
+.customer-view .button.button-positive-custom {
+  background: $myaccount-button-bg-color;
+  border-radius: 30px;
+  text-transform: uppercase;
+  border-color: transparent !important;
+}
+
+/* Login Page */
+.customer-view div[ng-show="display_login_form"] > div {
+  background: $myaccount-opacity;
+  border-radius: 20px;
+  padding-bottom: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Register Page */
+.customer-view div[ng-include="'templates/customer/account/l1/register.html'"] {
+  background: $myaccount-opacity; 
+  padding-bottom: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Forgot Password Page */
+.customer-view div[ng-show="display_forgot_password_form"] {
+  background: $myaccount-opacity; 
+  padding-bottom: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Forgot Password Page Description */
+.customer-view div[ng-show="display_forgot_password_form"] .padding.text-left p {
+  color: $myaccount-text-color;   
+}
+
+/* Apply Fancy Box-shadow to Login, Create Account & Logout Links */
+.customer-view div[ng-click="displayLoginForm()"], .customer-view div[ng-click="displayAccountForm()"], .customer-view div[ng-click="logout()"] {
+  background: $myaccount-links-opacity !important; 
+  border-radius: 0% 0% 50% 50% !important;
+  padding-bottom: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* Login, Create Account & Logout Links Color */
+.customer-view div[ng-click="displayLoginForm()"] span, .customer-view div[ng-click="displayAccountForm()"] span, .customer-view div[ng-click="logout()"] span {
+  color: $myaccount-links-color; 
+}
+
+/* Forgot Password Link Color */
+.customer-view span[ng-click="displayForgotPasswordForm()"] {
+  color: $myaccount-forgot-pass-link-color; 
+}
+
+/* Read Privacy Policy Text */
+.customer-view div[ng-include="'templates/customer/account/l1/register.html'"] .padding.text-right {
+  background: $myaccount-list-items-opacity;
+  text-align: center;
+  border-radius: 15px;
+  margin: 7px; 
+}
+
+.customer-view input.text-right { text-align: right; }
+
+/* Settings Page */
+.customer-view div[ng-show="display_settings"] {
+  background: $myaccount-opacity;
+  margin-top: -20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Settings Page Section Divider Title */
+.customer-view div[ng-show="display_settings"] .list .item-divider.item-divider-custom {
+  background: $myaccount-title-bg-color;
+}
+
+/* Adjust Text Align */
+.customer-view .text-left { text-align: center; } 
+
+.customer-view .padding.text-center span { display: block; }
+
+/***** END: My Account CSS *****/
+
+/* Edits */
+.button.icon-left.ion-clipboard.ng-binding {
+    display: none !important;
+}
+.card .item-divider.item-divider-custom h2, .card .item-divider.item-divider-custom p, .card .item-divider.item-divider-custom span {
+    color: white;
+}
+
+ion-view[state="commercepro-store-product-list"] div[ng-if="sub_categories.length"] ion-item.item.item-custom {
+    background-color: transparent;
+}
+
+ion-view[state="commercepro-store-product-list"] div[ng-if="sub_categories.length"] {
+    background-color: transparent;
+}
+
+ion-view[state="commercepro-store-product-list"] .col.col-90.text-center.col-center input#search {
+    border: 2px solid #d5b026;
+    background: transparent !important;
+    border-radius: 10px;
+}
